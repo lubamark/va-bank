@@ -1,0 +1,98 @@
+.offer {
+  padding-top: 28px;
+  padding-bottom: 41px;
+
+  background-color: $white;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
+
+  @media screen and (min-width: $tablet-width) {
+    width: 340px;
+    padding-bottom: 35px;
+
+    .container {
+      padding: 0 25px 0 27px;
+    }
+  }
+
+  &__header {
+    display: flex;
+
+  }
+
+  &__img img {
+    display: block;
+  }
+
+  &__name {
+    position: relative;
+    margin-bottom: 9px;
+
+    font-family: $Roboto;
+    font-weight: 500;
+    line-height: 20px;
+    font-size: 13px;
+    color: $red-hover;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -30px;
+
+      height: 2px;
+      width: 35px;
+      background-color: $red-hover;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+      margin-bottom: 13px;
+    }
+
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 21px;
+    padding: 0;
+    font-family: $Oswald;
+    font-weight: 400;
+    line-height: 30px;
+    font-size: 21px;
+    text-transform: uppercase;
+
+    color: $black;
+
+    @media screen and (min-width: $tablet-width) {
+      margin-bottom: 13px;
+      font-size: 23px;
+      line-height: 34px;
+    }
+  }
+
+  &__list {
+    @include list-reset;
+  }
+
+  &__item {
+    padding-left: 25px;
+    margin-bottom: 20px;
+
+    font-family: $Roboto;
+    font-weight: 400;
+    line-height: 21px;
+    font-size: 14px;
+
+    color: $black;
+    background: url('../img/icon/check-icon.svg') no-repeat 1px 6px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+      padding-left: 23px;
+      margin-bottom: 12px;
+    }
+  }
+
+}

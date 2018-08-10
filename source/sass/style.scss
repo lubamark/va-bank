@@ -1,0 +1,35 @@
+//общие
+@import 'global/fonts';
+@import 'global/variables';
+@import 'global/common';
+@import 'global/mixins';
+@import 'global/slick';
+@import 'global/selectric';
+
+//
+
+@import 'blocks/page-header';
+@import 'blocks/page-nav';
+@import 'blocks/main-menu';
+@import 'blocks/our-team';
+@import 'blocks/features';
+@import 'blocks/join-block';
+@import 'blocks/section-header';
+@import 'blocks/news';
+@import 'blocks/history';
+@import 'blocks/slider';
+@import 'blocks/teachers';
+@import 'blocks/about-school';
+@import 'blocks/invite';
+@import 'blocks/appointment';
+@import 'blocks/form';
+@import 'blocks/partners';
+@import 'blocks/offer';
+@import 'blocks/page-footer';
+@import 'blocks/contacts';
+@import 'blocks/copyright';
+
+@import 'blocks/banner';
+@import 'blocks/modal';
+@import 'blocks/partner-info';
+

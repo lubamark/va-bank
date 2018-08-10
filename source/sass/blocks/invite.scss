@@ -1,0 +1,95 @@
+.invite {
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
+
+  @media screen and (min-width: $tablet-width) {
+    box-shadow: none;
+  }
+  &__block {
+    padding-top: 36px;
+    padding-bottom: 45px;
+    color: $white;
+
+    background: url('../img/mobile/invite-bg.jpg') no-repeat top left;
+    background-size: cover;
+
+    @media screen and (min-width: $tablet-width) {
+      padding-top: 40px;
+      flex-basis: 359px;
+      flex-grow: 1;
+      flex-shrink: 0;
+      background-image: url('../img/tablet/invite-bg.jpg');
+
+      .container {
+        padding-left: 47px;
+        padding-right: 25px;
+      }
+
+    }
+  }
+  &__container {
+    @media screen and (min-width: $tablet-width) {
+      width: calc(100% - 70px);
+      margin: 0 auto;
+      box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
+      display: flex;
+    }
+
+  }
+
+  &__title {
+    margin: 0 0 20px;
+    padding: 0;
+
+    font-family: $Oswald;
+    font-weight: 500;
+    line-height: 38px;
+    font-size: 26px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    color: $white;
+
+    @media screen and (min-width: $tablet-width) {
+      margin-bottom: 24px;
+    }
+
+  }
+  &__list {
+    @include list-reset;
+    margin-bottom: 21px;
+    @media screen and (min-width: $tablet-width) {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__item {
+    padding-left: 28px;
+    margin-bottom: 18px;
+
+    font-family: $Oswald;
+    font-weight: 400;
+    line-height: 29px;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    color: $white;
+    background: url('../img/icon/check-icon.svg') no-repeat 0 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+      margin-bottom: 15px;
+      padding-left: 23px;
+      letter-spacing: 0.005rem;
+    }
+
+    & strong {
+      font-size: 22px;
+      line-height: 32px;
+      font-weight: 400;
+    }
+  }
+}

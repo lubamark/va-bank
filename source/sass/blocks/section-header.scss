@@ -1,0 +1,46 @@
+.section-header {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @media screen and(min-width: $tablet-width) {
+    margin-bottom: 26px;
+  }
+
+  @media screen and (min-width: $laptop-width) {
+    margin-bottom: 15px;
+  }
+
+  &__name {
+
+    font-family: $Oswald;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 36px;
+    letter-spacing: 0.02rem;
+    text-transform: uppercase;
+
+    color: $black;
+
+    @media screen and (min-width: $tablet-width) {
+      font-size: 44px;
+    }
+
+    @media screen and(min-width: $laptop-width) {
+      font-size: 50px;
+    }
+  }
+
+  &__link {
+    margin-bottom: 5px;
+
+    @media screen and (min-width: $tablet-width) {
+      margin-bottom: 3px;
+    }
+    @media screen and (min-width: $laptop-width) {
+      margin-bottom: 8px;
+    }
+  }
+}

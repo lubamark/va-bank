@@ -1,0 +1,44 @@
+.main-menu {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: calc(100% - 65px);
+
+  @media screen and (min-width: $tablet-width) {
+    width: calc(100% - 100px);
+  }
+
+  @media screen and (min-width: $laptop-width) {
+    display: flex;
+    order: 2;
+  }
+
+
+  &__link {
+    display: inline-block;
+    padding: 14px 10px 15px 10px;
+    font-family: $Oswald;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 19px;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: $black;
+
+    &:hover,
+    &:focus {
+      color: $red;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+      font-size: 17px;
+      padding: 14px 14px 15px;
+    }
+    @media screen and (min-width: $laptop-width) {
+      padding: 14px 19px 15px;
+    }
+  }
+}

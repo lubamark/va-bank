@@ -1,0 +1,115 @@
+.join-block {
+  padding-top: 40px;
+  padding-bottom: 45px;
+
+  background-color: $medium-gray;
+  color: $white;
+
+  @media screen and (min-width: $tablet-width) {
+    position: absolute;
+    top: 112px;
+    right: 35px;
+    width: 303px;
+    padding-top: 28px;
+    padding-bottom: 38px;
+    background: $medium-gray url('../img/tablet/header-join.png') no-repeat right 64px;
+
+    .container {
+      padding: 0 28px;
+    }
+  }
+  @media screen and (min-width: $laptop-width) {
+    padding-top: 46px;
+    padding-bottom: 55px;
+    top: 131px;
+    right: 23px;
+    width: 374px;
+
+    .container {
+      padding: 0 36px;
+    }
+  }
+
+  &__list {
+    @include list-reset;
+    margin-bottom: 23px;
+
+    @media screen and (min-width: $laptop-width) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 20px;
+    padding: 0;
+    font-family: $Oswald;
+    font-weight: 500;
+    line-height: 35px;
+    font-size: 26px;
+    letter-spacing: 0.04rem;
+    text-transform: uppercase;
+
+    color: $white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    @media screen and (min-width: $tablet-width){
+      margin-bottom: 11px;
+      line-height: 43px;
+      font-size: 32px;
+    }
+    @media screen and (min-width: $laptop-width) {
+      margin-left: 5px;
+      margin-bottom: 22px;
+      line-height: 48px;
+      font-size: 36px;
+
+    }
+
+  }
+
+  &__item {
+    margin-bottom: 15px;
+
+    font-family: $Oswald;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 18px;
+    letter-spacing: 0.04rem;
+    text-transform: uppercase;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+      margin-bottom: 11px;
+
+      &:first-child {
+        padding-right: 85px;
+      }
+      &:nth-child(2) {
+        padding-right: 140px;
+      }
+      &:last-child {
+        padding-right: 60px;
+      }
+
+    }
+    @media screen and (min-width: $laptop-width) {
+      font-size: 20px;
+      margin-bottom: 21px;
+      line-height: 29px;
+      padding-left: 5px;
+
+      &:first-child {
+        padding-right: 120px;
+      }
+      &:nth-child(2) {
+        padding-right: 177px;
+      }
+      &:last-child {
+        padding-right: 90px;
+      }
+    }
+
+  }
+}

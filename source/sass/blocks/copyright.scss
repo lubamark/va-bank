@@ -1,0 +1,65 @@
+.copyright {
+  padding-top: 37px;
+  padding-bottom: 30px;
+
+  p, a {
+    padding: 0;
+    margin: 0;
+
+    font-family: $Roboto;
+    font-weight: 400;
+    line-height: 15px;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+
+    color: rgba(255, 255, 255, 0.4);
+  }
+  p {
+    margin-bottom: 20px;
+  }
+  a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $red;
+    }
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    padding-top: 26px;
+    padding-bottom: 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+}
+.redramka {
+  margin-bottom: 10px;
+  a:hover,
+  a:focus {
+    color: rgba(255, 255, 255, 0.4);
+    .redramka__brand {
+      color: $red;
+    }
+  }
+  &__brand {
+    position: relative;
+    margin-left: 30px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: -19px;
+
+      width: 11px;
+      height: 11px;
+      border: 3px solid $red-hover;
+    }
+  }
+}

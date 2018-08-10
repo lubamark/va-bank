@@ -1,0 +1,137 @@
+.slider {
+
+  @media screen and (min-width: $tablet-width) {
+    width: 380px;
+  }
+
+  @media screen and (min-width: $laptop-width) {
+    width: 566px;
+  }
+
+  &__list {
+    @include list-reset;
+    margin-bottom: 3px;
+    @media screen and (min-width: $tablet-width) {
+      margin: 0;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    width: 95px;
+    justify-content: space-between;
+    margin-bottom: 25px;
+
+    @media screen and (min-width: $tablet-width) {
+      margin-left: auto;
+      margin-bottom: 5px;
+      margin-top: 6px;
+    }
+
+    @media screen and (min-width: $laptop-width) {
+      position: absolute;
+      right: 23px;
+    }
+  }
+  &__control {
+    position: relative;
+    height: 27px;
+    width: 46px;
+    padding: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 20px;
+
+      width: 7px;
+      height: 7px;
+      border-bottom: 2px solid $white;
+      border-left: 2px solid $white;
+      transform-origin: center;
+      transform: rotate(45deg);
+    }
+    &--prev::before {
+      transform: rotate(45deg);
+    }
+    &--next::before {
+      transform: rotate(-135deg);
+    }
+  }
+
+  &__item {
+    img{
+      width: 100%;
+      height: auto;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+      width: 220px !important;
+    }
+
+    @media screen and (min-width: $laptop-width) {
+      margin-top: 5px;
+      width: 390px !important;
+    }
+  }
+  &__index {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 110px;
+
+    &::before {
+      content: '';
+
+      order: 2;
+      width: 52px;
+      height: 2px;
+      background-color: $white;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+      margin-left: auto;
+    }
+
+    @media screen and (min-width: $laptop-width) {
+      margin-top: -44px;
+      width: 125px;
+    }
+  }
+  &__current {
+    order:1;
+
+    font-family: $Oswald;
+    font-weight: 300;
+    line-height: 64px;
+    font-size: 36px;
+    color: $red;
+
+    @media screen and (min-width: $tablet-width) {
+      line-height: 36px;
+    }
+    @media screen and (min-width: $laptop-width) {
+      font-size: 46px;
+    }
+
+  }
+  &__quantity {
+    order: 3;
+
+    font-family: $Oswald;
+    font-weight: 300;
+    line-height: 32px;
+    font-size: 18px;
+    color: $white;
+
+    @media screen and (min-width: $tablet-width) {
+      line-height: 36px;
+    }
+    @media screen and (min-width: $laptop-width) {
+      font-size: 20px;
+    }
+  }
+}

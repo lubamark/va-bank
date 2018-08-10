@@ -1,0 +1,118 @@
+.about-school{
+  padding-top: 32px;
+  padding-bottom: 38px;
+
+  @media screen and(min-width: $tablet-width) {
+    padding: 23px 0;
+    background: url('../img/tablet/about-school-bg.png') no-repeat left 42px;
+
+    .container {
+      padding-left: 347px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 29px 0;
+    padding: 0;
+    width: 295px;
+
+    font-family: $Oswald;
+    font-weight: 500;
+    line-height: 48px;
+    font-size: 36px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    color: $black;
+
+    @media screen and(min-width: $tablet-width) {
+      margin-bottom: 22px;
+      line-height: 59px;
+      font-size: 44px;
+      width: 100%;
+    }
+
+  }
+  &__list {
+    @include list-reset;
+
+    @media screen and(min-width: $tablet-width) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+  }
+  &__item {
+    padding: 5px 5px 5px 73px;
+    margin-bottom: 33px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @each $thing in sports, trainer, license, tourney {
+      &--#{$thing} {
+        background-image: url('../img/icon/#{$thing}-icon.svg');
+      }
+    }
+    &--trainer {
+      background-position: 9px 4px;
+    }
+    &--license {
+      background-position: 6px 2px;
+    }
+    &--tourney {
+      background-position: 10px 5px;
+    }
+
+    @media screen and(min-width: $tablet-width) {
+      flex-basis: 46%;
+      flex-grow: 1;
+      padding: 80px 0 0;
+      margin-bottom: 39px;
+
+      &:nth-child(2n + 1) {
+        margin-right: 25px;
+      }
+
+      &--sports {
+        background-position: -5px 0;
+      }
+      &--trainer {
+        background-position: 0 8px;
+      }
+      &--license {
+        background-position: 1px 16px;
+      }
+      &--tourney {
+        background-position: 1px 12px;
+      }
+    }
+  }
+  &__caption {
+    display: block;
+    margin-bottom: 4px;
+
+    font-family: $Oswald;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 18px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $black;
+  }
+
+  &__text {
+    display: block;
+
+    font-family: $Roboto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: $black;
+  }
+}

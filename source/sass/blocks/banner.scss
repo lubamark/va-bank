@@ -1,0 +1,152 @@
+.banner {
+  margin-top: 20px;
+  padding: 13px 20px 18px 20px;
+  min-height: 225px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  border-top: 4px solid $red;
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+
+  &__container {
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 380px) {
+
+    padding: 20px 25px 28px 25px;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    width: 340px;
+    flex-grow: 1;
+    margin-top: 0;
+  }
+
+
+  &--announce {
+    background-image: url('../img/banner/announce-bg.jpg');
+    background-color: $white;
+    color: $black;
+  }
+  &--result {
+    background-image: url('../img/banner/result-bg.jpg');
+    background-color: $dark-gray;
+    color: $white;
+  }
+  &__team--right {
+    .banner__result {
+      order: 0;
+    }
+    .banner__logo {
+      order: 1;
+    }
+  }
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 5px;
+    width: 80px;
+    height: 57px;
+
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    @media screen and (min-width: 380px) {
+      margin-bottom: 8px;
+    }
+
+  }
+  &__info {
+    display: flex;
+    justify-content: space-around;
+
+    margin-bottom: 10px;
+    font-family: $Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 17px;
+    font-size: 11px;
+
+    color: rgba($black, 0.7);
+
+    @media screen and (min-width: 380px) {
+      margin-bottom: 15px;
+      line-height: 18px;
+      font-size: 12px;
+    }
+
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    font-family: $Oswald;
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    @media screen and (min-width: 380px) {
+      margin-bottom: 15px;
+      max-width: 260px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  &__status {
+    font-family: $Roboto;
+    font-weight: 400;
+
+    color: $red;
+
+  }
+  &__score {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__teams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__result {
+    font-family: $Oswald;
+    font-weight: 500;
+    line-height: 50px;
+    font-size: 42px;
+    @media screen and (min-width: 380px) {
+      letter-spacing: 0.05em;
+    }
+
+  }
+  &__name {
+    font-family: $Oswald;
+    font-weight: 400;
+    line-height: 14px;
+    font-size: 12px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  &__city {
+    font-family: $Roboto;
+    font-weight: 400;
+    line-height: 19px;
+    font-size: 11px;
+
+    opacity: 0.7;
+  }
+}
