@@ -40,5 +40,9 @@
     @media screen and (min-width: $laptop-width) {
       padding: 14px 19px 15px;
     }
+    @media screen and (min-width: $desktop-width) {
+      font-size: 19px;
+      padding: 18px 25px 15px;
+    }
   }
 }

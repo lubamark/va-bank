@@ -10,6 +10,9 @@
   @media screen and (min-width: $laptop-width) {
     padding: 22px 0;
   }
+  @media screen and (min-width: $desktop-width) {
+    padding: 13px 0;
+  }
 
   &__logo {
     display: block;
@@ -25,6 +28,13 @@
       order: 1;
       margin-top: 5px;
       margin-right: 12px;
+    }
+    @media screen and (min-width: $desktop-width) {
+      margin-right: 15px;
+      img {
+        width: 86px;
+        height: 84px;
+      }
     }
   }
 
@@ -49,6 +59,11 @@
       margin-right: 0;
       margin-bottom: 5px;
       letter-spacing: -.01em;
+    }
+    @media screen and (min-width: $desktop-width) {
+      font-size: 22px;
+      margin-bottom: 0;
+      letter-spacing: 0.03em;
     }
   }
 

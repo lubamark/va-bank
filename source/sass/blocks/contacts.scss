@@ -19,15 +19,19 @@
         height: 68px;
       }
     }
+    @media screen and (min-width: $laptop-width) {
+      margin-right: 50px;
+    }
   }
 
   &__point {
     display: flex;
     margin-bottom: 13px;
+    max-width: 400px;
 
 
     &--social {
-      margin-left: 84px;
+      margin-left: 80px;
 
       font-family: $Roboto;
       font-weight: 300;

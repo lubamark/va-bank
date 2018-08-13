@@ -13,10 +13,20 @@
       }
     }
     @media screen and (min-width: $laptop-width) {
+      overflow-x: hidden;
       padding-top: 70px;
       padding-bottom: 66px;
       background: url('../img/laptop/history-bg.jpg') no-repeat top left;
       background-size: cover;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      padding-top: 91px;
+      padding-bottom: 103px;
+
+      .container {
+        position: relative;
+      }
     }
   }
   &__title {
@@ -59,6 +69,12 @@
 
     }
 
+    @media screen and (min-width: $desktop-width) {
+      font-size: 36px;
+      padding-right: 40px;
+      padding-left: 0;
+    }
+
   }
   &__button{
     margin-bottom: 54px;
@@ -71,7 +87,6 @@
     }
 
   }
-
   &__line {
     padding-top: 41px;
     padding-bottom: 35px;
@@ -178,6 +193,16 @@
       font-size: 13px;
       font-weight: 500;
     }
+  }
 
+  &__header {
+    @media screen and (min-width: $laptop-width) {
+      width: 415px;
+      flex-shrink: 0;
+    }
+    @media screen and (min-width: $desktop-width) {
+      width: 475px;
+
+    }
   }
 }

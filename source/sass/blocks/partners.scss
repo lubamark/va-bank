@@ -8,11 +8,18 @@
     &__container {
       display: flex;
       justify-content: space-between;
-      width: calc(100% - 70px);
+      padding: 0 35px;
       margin-left: auto;
       margin-right: auto;
     }
   }
+  @media screen and (min-width: $laptop-width) {
+    padding-top: 66px;
+    &__container {
+      padding: 0 23px;
+    }
+  }
+
 
   &__block {
     margin-bottom: 48px;
@@ -25,6 +32,9 @@
       .container {
         padding: 0;
       }
+    }
+    @media screen and (min-width: $laptop-width) {
+      padding-top: 22px;
     }
   }
 
@@ -45,11 +55,16 @@
     @media screen and (min-width: $tablet-width) {
       font-size: 44px;
     }
+
+    @media screen and (min-width: $laptop-width) {
+      margin-bottom: 10px;
+      font-size: 50px;
+    }
   }
 
   &__subtitle {
       display: block;
-    margin-bottom: 25px;
+      margin-bottom: 25px;
       font-family: $Roboto;
 
       font-weight: 400;
@@ -62,6 +77,10 @@
     @media screen and (min-width: $tablet-width) {
       margin-bottom: 28px;
     }
+
+    @media screen and (min-width: $laptop-width) {
+      margin-bottom: 20px;
+    }
   }
 
   &__list {
@@ -71,17 +90,21 @@
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
+
+    @media screen and (min-width: $laptop-width) {
+      margin-bottom: 18px;
+    }
   }
 
   &__item {
-    flex-basis: 134px;
+    width: 134px;
     height: 83px;
     margin-right: 11px;
     margin-bottom: 10px;
     border: 1px solid $light-gray;
     background-color: $white;
 
-    &:nth-child(n + 2) {
+    &:nth-child(2n) {
       margin-right: 0;
     }
 
@@ -92,22 +115,23 @@
     }
 
     @media screen and (min-width: 351px) {
-      &:nth-child(n + 2) {
+      &:nth-child(2n) {
         margin-right: 11px;
       }
-
-      &:last-child {
-        margin-right: 0;
-      }
-
     }
     @media screen and (min-width: $tablet-width) {
+      width: 120px;
+      height: 74px;
       margin-right: 20px;
       margin-bottom: 20px;
-      &:nth-child(n + 2) {
-        margin-right: 20px;
-      }
     }
+    @media screen and (min-width: $laptop-width) {
+      margin-right: 16px;
+      margin-bottom: 19px;
+      width: 143px;
+      height: 90px;
+    }
+
   }
 
   &__img {
@@ -115,6 +139,11 @@
     justify-content: center;
     align-items: center;
     height: 82px;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
 
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
     /* Firefox 3.5+ */

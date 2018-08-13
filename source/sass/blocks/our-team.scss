@@ -1,14 +1,16 @@
 .our-team {
+  overflow-x: hidden;
+
 
   &__header {
     padding-top: 87px;
-    background: url('../img/mobile/header-bg.jpg') no-repeat top center;
+    background: url('../img/mobile/header-bg.png') no-repeat top center;
     background-size: cover;
 
     @media screen and (min-width: $tablet-width) {
       padding-top: 130px;
 
-      background: url('../img/tablet/header-bg.jpg') no-repeat top center;
+      background: url('../img/tablet/header-bg.png') no-repeat top center;
       background-size: cover;
 
       .container {
@@ -22,12 +24,35 @@
       padding-top: 159px;
       padding-bottom: 22px;
 
-      background: url('../img/laptop/header-bg.jpg') no-repeat top center;
+      background: url('../../img/laptop/header-bg.png') no-repeat top center;
       background-size: cover;
+
       .container {
         width: calc(100% - 450px);
         padding: 0 0 0 23px;
       }
+    }
+    @media screen and (min-width: $desktop-width) {
+      background: url('../../img/desktop/header-bg.png') no-repeat top center;
+      background-size: cover;
+      .container {
+        position: relative;
+        z-index: 2;
+
+        padding-left: 0;
+        max-width: 1160px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+  &__container {
+    @media screen and (min-width: $desktop-width) {
+      position: relative;
+      max-width: 1208px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -56,6 +81,10 @@
       line-height: 91px;
       font-size: 72px;
     }
+    @media screen and (min-width: $desktop-width) {
+      width: 550px;
+      margin-bottom: 5px;
+    }
   }
 
   &__subtitle {
@@ -80,7 +109,10 @@
       margin-bottom: 41px;
       line-height: 28px;
       font-size: 20px;
-
+    }
+    @media screen and (min-width: $desktop-width) {
+      width: 550px;
+      margin-bottom: 45px;
     }
   }
 

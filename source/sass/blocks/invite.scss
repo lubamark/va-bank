@@ -4,6 +4,7 @@
   @media screen and (min-width: $tablet-width) {
     box-shadow: none;
   }
+
   &__block {
     padding-top: 36px;
     padding-bottom: 45px;
@@ -23,15 +24,41 @@
         padding-left: 47px;
         padding-right: 25px;
       }
+    }
+    @media screen and (min-width: $laptop-width) {
+      position: relative;
+      padding-top: 45px;
 
+      background-image: url('../img/laptop/invite-bg.jpg');
+      &::before {
+        content: '';
+        position: absolute;
+        top: 21px;
+        right: -46px;
+
+        width: 249px;
+        height: 520px;
+
+        background: url('../img/laptop/invite-kid.png') no-repeat top left;
+      }
+      .container {
+        padding-left: 49px;
+      }
     }
   }
   &__container {
     @media screen and (min-width: $tablet-width) {
-      width: calc(100% - 70px);
+      width: 100%;
+      padding-left: 35px;
+      padding-right: 35px;
       margin: 0 auto;
       box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
       display: flex;
+    }
+
+    @media screen and (min-width: $laptop-width) {
+      width: 100%;
+      padding: 0 23px;
     }
 
   }
@@ -51,6 +78,12 @@
 
     @media screen and (min-width: $tablet-width) {
       margin-bottom: 24px;
+    }
+    @media screen and (min-width: $laptop-width) {
+      margin-bottom: 18px;
+      width: 400px;
+      font-size: 32px;
+      line-height: 47px;
     }
 
   }
@@ -80,16 +113,34 @@
       margin-bottom: 0;
     }
 
+    & strong {
+      font-size: 22px;
+      line-height: 32px;
+      font-weight: 400;
+    }
+
     @media screen and (min-width: $tablet-width) {
       margin-bottom: 15px;
       padding-left: 23px;
       letter-spacing: 0.005rem;
     }
 
-    & strong {
-      font-size: 22px;
-      line-height: 32px;
-      font-weight: 400;
+    @media screen and (min-width: $laptop-width) {
+      margin-bottom: 18px;
+      line-height: 28px;
+      background-position: left 7px;
+
+      &:first-child {
+        padding-right: 150px;
+      }
+      &:nth-child(2) {
+        padding-right: 250px;
+      }
+      &:nth-child(3) {
+        padding-right: 220px;
+      }
     }
+
+
   }
 }

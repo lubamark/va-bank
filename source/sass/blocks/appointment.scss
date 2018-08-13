@@ -2,6 +2,10 @@
   padding: 37px 0 66px 0;
   background-color: $white;
 
+  &__laptop-visible {
+    display: none;
+  }
+
   @media screen and (min-width: $tablet-width) {
     padding-top: 35px;
     padding-bottom: 56px;
@@ -9,6 +13,18 @@
    .container {
      padding: 0 50px 0 43px;
    }
+  }
+
+  @media screen and (min-width: $laptop-width) {
+    padding-top: 43px;
+    padding-bottom: 47px;
+    width: 380px;
+    .container {
+      padding: 0 38px 0 42px;
+    }
+    &__laptop-visible {
+      display: inline;
+    }
   }
 
   &__title {
@@ -37,6 +53,16 @@
       strong {
         font-size: 26px;
         letter-spacing: -0.01rem;
+      }
+    }
+
+    @media screen and (min-width: $laptop-width) {
+      margin-bottom: 21px;
+      font-size: 28px;
+      line-height: 43px;
+      strong {
+        font-size: 32px;
+        letter-spacing: -0.015rem;
       }
     }
 

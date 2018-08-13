@@ -26,6 +26,16 @@
     margin-top: 0;
   }
 
+  @media screen and (min-width: $desktop-width) {
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    width: 376px;
+    &__container {
+      max-width: 100%;
+    }
+  }
+
 
   &--announce {
     background-image: url('../img/banner/announce-bg.jpg');
@@ -63,6 +73,10 @@
       margin-bottom: 8px;
     }
 
+    @media screen and (min-width: $desktop-width) {
+      height: 60px;
+    }
+
   }
   &__info {
     display: flex;
@@ -81,6 +95,10 @@
       margin-bottom: 15px;
       line-height: 18px;
       font-size: 12px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      margin-bottom: 25px;
     }
 
   }
@@ -104,6 +122,13 @@
       font-size: 16px;
       line-height: 24px;
     }
+
+    @media screen and (min-width: $desktop-width) {
+      max-width: 100%;
+      margin-bottom: 0;
+      line-height: 29px;
+      font-size: 18px;
+    }
   }
   &__status {
     font-family: $Roboto;
@@ -116,6 +141,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (min-width: $desktop-width) {
+      align-items: flex-start;
+    }
   }
   &__teams {
     display: flex;
@@ -131,6 +160,11 @@
     @media screen and (min-width: 380px) {
       letter-spacing: 0.05em;
     }
+    @media screen and (min-width: $desktop-width) {
+      margin-top: 10px;
+      line-height: 68px;
+      font-size: 50px;
+    }
 
   }
   &__name {
@@ -140,6 +174,11 @@
     font-size: 12px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    @media screen and (min-width: $desktop-width) {
+    line-height: 27px;
+    font-size: 14px;
+  }
   }
   &__city {
     font-family: $Roboto;

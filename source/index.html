@@ -16,12 +16,12 @@
   <!--<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">-->
   <!--<meta name="msapplication-TileColor" content="#da532c">-->
   <!--<meta name="theme-color" content="#ffffff">-->
-  <!--<style>-->
-    <!--body {-->
-      <!--background: url('1024.jpg') no-repeat center top;-->
-      <!--opacity: 0.7;-->
-    <!--}-->
-  <!--</style>-->
+  <style>
+    body {
+      background: url('1440.jpg') no-repeat center top;
+      opacity: 0.7;
+    }
+  </style>
 
 </head>
 <body class="_menu">
@@ -50,37 +50,41 @@
 </header>
 <main class="index-main">
   <section class="our-team">
-    <h1 class="visually-hidden">Спортивная школа «Ва-банк»</h1>
-    <div class="our-team__header">
-      <div class="container">
-        <p class="our-team__title">Команда нашего города</p>
-        <p class="our-team__subtitle">Команда по мини-футболу города Томска</p>
-        <a class="our-team__button button button--arrow" href="#">Подробнее</a>
+
+      <h1 class="visually-hidden">Спортивная школа «Ва-банк»</h1>
+      <div class="our-team__header">
+        <div class="container">
+          <p class="our-team__title">Команда нашего города</p>
+          <p class="our-team__subtitle">Команда по мини-футболу города Томска</p>
+          <a class="our-team__button button button--arrow" href="#">Подробнее</a>
+        </div>
+      </div>
+        <div class="our-team__features features">
+          <div class="container">
+            <ul class="features__list">
+              <li class="features__item features__item--ball">Способствуем развитию мини-футбола</li>
+              <li class="features__item features__item--team">Воспитываем профессиональную команду</li>
+              <li class="features__item features__item--school">Развиваем свою спортивную школу в городе Томске</li>
+            </ul>
+          </div>
+        </div>
+    <div class="join-block__container">
+      <div class="our-team__join join-block">
+        <div class="container">
+          <h3 class="join-block__title">
+            Набор в детские команды
+          </h3>
+          <ul class="join-block__list">
+            <li class="join-block__item">ДЛЯ ДЕТЕЙ от 7 лет</li>
+            <li class="join-block__item">Стоимость – 3000 рублей в месяц</li>
+            <li class="join-block__item">Первое пробное занятие — бесплатно</li>
+          </ul>
+          <button class="button button--wide join-block__button j-modal-button" type="button">Записаться на занятие
+          </button>
+        </div>
       </div>
     </div>
-    <div class="our-team__features features">
-      <div class="container">
-        <ul class="features__list">
-          <li class="features__item features__item--ball">Способствуем развитию мини-футбола</li>
-          <li class="features__item features__item--team">Воспитываем профессиональную команду</li>
-          <li class="features__item features__item--school">Развиваем свою спортивную школу в городе Томске</li>
-        </ul>
-      </div>
-    </div>
-    <div class="our-team__join join-block">
-      <div class="container">
-        <h3 class="join-block__title">
-          Набор в детские команды
-        </h3>
-        <ul class="join-block__list">
-          <li class="join-block__item">ДЛЯ ДЕТЕЙ от 7 лет</li>
-          <li class="join-block__item">Стоимость – 3000 рублей в месяц</li>
-          <li class="join-block__item">Первое пробное занятие — бесплатно</li>
-        </ul>
-        <button class="button button--wide join-block__button j-modal-button" type="button">Записаться на занятие
-        </button>
-      </div>
-    </div>
+
   </section>
   <section class="news">
     <div class="container">
@@ -93,7 +97,7 @@
           <div class="news__item">
             <a href="#" class="news__link">
               <div class="news__img">
-                <img src="img/news-main.jpg" alt="" class="news__img" width="280" height="126">
+                <img src="img/news-main.jpg" alt="" class="news__img">
               </div>
               <div class="news__text">
                 <span class="news__date">27 июня 2018 г.</span>
@@ -226,6 +230,11 @@
           <div class="slider__controls j-slider-controls">
           </div>
           <ul class="slider__list j-slider">
+            <li class="slider__item"><img src="img/mobile/slide-1.jpg" alt="" width="282" height="191"></li>
+            <li class="slider__item"><img src="img/mobile/slide-1.jpg" alt="" width="282" height="191"></li>
+            <li class="slider__item"><img src="img/mobile/slide-1.jpg" alt="" width="282" height="191"></li>
+            <li class="slider__item"><img src="img/mobile/slide-1.jpg" alt="" width="282" height="191"></li>
+            <li class="slider__item"><img src="img/mobile/slide-1.jpg" alt="" width="282" height="191"></li>
             <li class="slider__item"><img src="img/mobile/slide-1.jpg" alt="" width="282" height="191"></li>
             <li class="slider__item"><img src="img/mobile/slide-1.jpg" alt="" width="282" height="191"></li>
             <li class="slider__item"><img src="img/mobile/slide-1.jpg" alt="" width="282" height="191"></li>
@@ -377,7 +386,7 @@
               <label for="agree" class="form__label--checkbox"> Я согласен на обработку персональных данных
               </label>
             </div>
-            <button class="button appointment__button button--wide" type="submit">Записаться</button>
+            <button class="button appointment__button button--wide" type="submit">Записаться<span class="appointment__laptop-visible"> на занятие</span></button>
           </form>
         </div>
       </div>
@@ -396,6 +405,26 @@
           </span>
           </div>
           <ul class="partners__list">
+            <li class="partners__item">
+              <a href="#" class="partners__link">
+                <div class="partners__img">
+                  <img src="img/partners/bear-logo-small.png" alt="Детский сад Медвежонок" width="65" height="54">
+                </div>
+              </a>
+            </li>
+            <li class="partners__item">
+              <a href="#" class="partners__link">
+                <div class="partners__img"><img src="img/partners/totolotek.jpg" alt="totolotek" width="104" height="40">
+                </div>
+              </a>
+            </li>
+            <li class="partners__item">
+              <a href="#" class="partners__link">
+                <div class="partners__img">
+                  <img src="img/partners/lomza.jpg" alt="lomza" width="125" height="75">
+                </div>
+              </a>
+            </li>
             <li class="partners__item">
               <a href="#" class="partners__link">
                 <div class="partners__img">

@@ -3,6 +3,7 @@ body {
   padding: 0;
   position: relative;
   min-width: $mobile-width;
+  width: 100%;
 
   box-sizing: border-box;
   font-family: 'Roboto', Arial, sans-serif;
@@ -130,10 +131,10 @@ a, button {
 
   @media screen and (min-width: $laptop-width) {
     padding: 0 23px;
-    padding: 0 23px;
   }
   @media screen and (min-width: $desktop-width) {
-    max-width: 1208px;
+    max-width: 1160px;
+    padding: 0;
   }
 }
 
