@@ -1,20 +1,33 @@
 .about-school{
+  position: relative;
   padding-top: 32px;
   padding-bottom: 38px;
 
   @media screen and(min-width: $tablet-width) {
     padding: 23px 0;
-    background: url('../img/tablet/about-school-bg.png') no-repeat left 42px;
 
     .container {
+      position: relative;
       padding-left: 347px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: 0;
+
+        width: 299px;
+        height: 537px;
+        background: url('../img/tablet/about-school-bg.png') no-repeat left top;
+        background-size: auto;
+      }
     }
   }
   @media screen and (min-width: $laptop-width) {
     position: relative;
     min-height: 930px;
     padding-top: 100px;
-    background: url('../img/laptop/about-school-bg.png') no-repeat left 81px;
+    padding-bottom: 100px;
 
     &::before {
       content: '';
@@ -23,15 +36,51 @@
       right: 0;
       z-index: -1;
 
-      width: 198px;
-      height: 292px;
-      background: url('../img/laptop/whistleweb.png') no-repeat top right;
-      background-blend-mode: multiply;
+      width: 202px;
+      height: 287px;
+      background: url('../img/свисток.png') no-repeat top left;
+      background-size: cover;
+
     }
     .container {
       padding-left: 520px;
+
+      &::after {
+        top: -15px;
+        left: -5px;
+        width: 486px;
+        height: 782px;
+        background: url('../img/laptop/about-school-bg.png') no-repeat left top;
+        background-size: cover;
+      }
     }
   }
+  @media screen and (min-width: $desktop-width) {
+    padding-top: 158px;
+    padding-bottom: 158px;
+    min-height: 1020px;
+    .container {
+      padding-left: 604px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: -53px;
+        left: -24px;
+
+        width: 545px;
+        height: 825px;
+        background: url('../img/desktop/about-school-bg.png') no-repeat left top;
+        background-size: auto;
+      }
+    }
+
+    &::before {
+      right: -16px;
+      width: 330px;
+      height: 342px;
+    }
+}
 
 
   &__title {

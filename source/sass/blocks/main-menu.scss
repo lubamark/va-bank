@@ -14,10 +14,9 @@
     order: 2;
   }
 
-
   &__link {
+    position: relative;
     display: inline-block;
-    padding: 14px 10px 15px 10px;
     font-family: $Oswald;
     font-weight: 500;
     line-height: normal;
@@ -28,21 +27,53 @@
 
     color: $black;
 
-    &:hover,
-    &:focus {
-      color: $red;
-    }
-
     @media screen and (min-width: $tablet-width) {
       font-size: 17px;
+    }
+
+    @media screen and (min-width: $laptop-width) {
+      &:hover,
+      &:focus {
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -15px;
+          left: 0;
+          padding: 0 10px;
+          width: 100%;
+          height: 4px;
+          background-color: $red;
+        }
+      }
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      font-size: 19px;
+      &::after {
+        bottom: -25px;
+      }
+    }
+  }
+
+  &__item {
+    padding: 14px 10px 15px 10px;
+
+    @media screen and (min-width: $tablet-width) {
       padding: 14px 14px 15px;
     }
     @media screen and (min-width: $laptop-width) {
       padding: 14px 19px 15px;
     }
     @media screen and (min-width: $desktop-width) {
-      font-size: 19px;
       padding: 18px 25px 15px;
     }
+
+    &._active .main-menu__link {
+      color: $red;
+  }
+
+
+
+
   }
 }

@@ -19,6 +19,7 @@
       flex-grow: 1;
       flex-shrink: 0;
       background-image: url('../img/tablet/invite-bg.jpg');
+      box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
 
       .container {
         padding-left: 47px;
@@ -45,6 +46,21 @@
         padding-left: 49px;
       }
     }
+    @media screen and (min-width: $desktop-width) {
+      padding-top: 55px;
+      padding-bottom: 70px;
+      background: url('../img/desktop/invite-bg.jpg') no-repeat top left;
+
+
+      &::before {
+        top: -21px;
+        right: -53px;
+        width: 304px;
+        height: 590px;
+        background: url('../img/desktop/invite-kid.png') no-repeat top left;
+        background-size: cover;
+      }
+    }
   }
   &__container {
     @media screen and (min-width: $tablet-width) {
@@ -52,13 +68,17 @@
       padding-left: 35px;
       padding-right: 35px;
       margin: 0 auto;
-      box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
       display: flex;
     }
 
     @media screen and (min-width: $laptop-width) {
       width: 100%;
+      max-width: 1160px;
       padding: 0 23px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      padding: 0;
     }
 
   }
@@ -85,13 +105,20 @@
       font-size: 32px;
       line-height: 47px;
     }
-
+    @media screen and (min-width: $desktop-width) {
+      margin-bottom: 30px;
+      font-size: 36px;
+      line-height: 52px;
+    }
   }
   &__list {
     @include list-reset;
     margin-bottom: 21px;
     @media screen and (min-width: $tablet-width) {
       margin-bottom: 23px;
+    }
+    @media screen and (min-width: $desktop-width) {
+      margin-bottom: 35px;
     }
   }
 
@@ -124,7 +151,6 @@
       padding-left: 23px;
       letter-spacing: 0.005rem;
     }
-
     @media screen and (min-width: $laptop-width) {
       margin-bottom: 18px;
       line-height: 28px;
@@ -140,7 +166,31 @@
         padding-right: 220px;
       }
     }
+    @media screen and (min-width: $desktop-width) {
+      padding-left: 29px;
+      margin-bottom: 17px;
+      line-height: 35px;
+      font-size: 20px;
+      background: url('../img/icon/check-icon.svg') no-repeat 0 5px;
+      background-size: 15px;
 
+      strong {
+        font-size: 30px;
+      }
 
+      &:nth-child(2) {
+        padding-right: 150px;
+      }
+      &:nth-child(3) {
+        padding-right: 250px;
+      }
+
+    }
+  }
+
+  &__appointment {
+    @media screen and (min-width: $tablet-width) {
+      box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
+    }
   }
 }

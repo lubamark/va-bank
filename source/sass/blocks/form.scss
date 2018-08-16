@@ -1,7 +1,17 @@
 .form {
-
   &__field {
     margin-bottom: 18px;
+    &--checkbox-before {
+      margin-bottom: 5px;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+      margin-bottom: 25px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      margin-bottom: 25px;
+    }
   }
   &__label {
 
@@ -26,7 +36,7 @@
 
       &::before {
         content: '';
-        top: 3px;
+        top: 2px;
         left: 0;
 
         width: 16px;
@@ -37,7 +47,7 @@
 
       &::after {
         content: none;
-        top: 6px;
+        top: 5px;
         left: 6px;
 
         width: 5px;
@@ -53,7 +63,6 @@
     @media screen and (min-width: $laptop-width) {
       &--checkbox {
         max-width: 100%;
-        margin-top: 13px;
         padding-left: 26px;
         line-height: 17px;
         font-size: 12px;
@@ -62,15 +71,15 @@
           width: 14px;
           height: 14px;
         }
-
         &::after {
-          top: 5px;
+          top: 4px;
           left: 5px;
         }
       }
     }
   }
-  &__input {
+  &__input,
+  &__textarea {
     padding: 12px 15px 12px;
     width: 100%;
 
@@ -90,22 +99,58 @@
       box-shadow: none;
       background-color: #F9F9F9;
     }
-
     &::placeholder {
       color: rgba($black,0.5);
     }
-
+    &._error {
+      border-color: #FDA4A4;
+      color: #FF5A5A;
+      background-color: #FFF9F9;
+    }
     &--checkbox:checked+.form__label--checkbox::after {
       content: '';
     }
 
+    @media screen and (min-width: $tablet-width) {
+      padding: 13px 15px 11px 22px;
+    }
+  }
+  &__textarea {
+    min-height: 150px;
+    min-width: 280px;
+    max-width: 727px;
+    max-height: 174px;
+
+    @media screen and (min-width: $tablet-width) {
+      height: 174px;
+      max-width: 320px;
+    }
   }
   &__select {
     height: 46px;
   }
+
+  &__tablet-row {
+    @media screen and (min-width: $tablet-width) {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      .form__tablet-column {
+        flex-basis: 50%;
+        .form__field:last-child {
+          margin-bottom: 0;
+        }
+
+        &:nth-child(2n +1) {
+          margin-right: 25px;
+        }
+      }
+    }
+    @media screen and (min-width: $laptop-width) {
+      margin-bottom: 5px;
+    }
+  }
 }
-
-
 
 
 // переопределение selectric

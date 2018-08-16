@@ -27,6 +27,14 @@
     }
   }
 
+  @media screen and (min-width: $desktop-width) {
+    padding-top: 48px;
+    width: 450px;
+    .container {
+      padding: 0 58px 0 56px;
+    }
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 19px;
@@ -52,7 +60,7 @@
 
       strong {
         font-size: 26px;
-        letter-spacing: -0.01rem;
+        letter-spacing: -0.01em;
       }
     }
 
@@ -65,7 +73,15 @@
         letter-spacing: -0.015rem;
       }
     }
-
+    @media screen and (min-width: $desktop-width) {
+      font-size: 32px;
+      line-height: 54px;
+      letter-spacing: 0.05em;
+      strong {
+        font-size: 36px;
+        letter-spacing: -0.01em;
+      }
+    }
   }
 
   &__button {

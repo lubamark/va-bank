@@ -18,7 +18,7 @@
     &::after {
       content: '';
       position: absolute;
-      top: 76px;
+      bottom: 0;
       right: -76px;
       z-index: 0;
       width: 270px;
@@ -43,11 +43,11 @@
     background: url('../img/laptop/join-bg.jpg') no-repeat top left;
 
     &::after {
-      top: 100px;
+
       right: -82px;
       z-index: 0;
       width: 344px;
-      height: 445px;
+      height: 418px;
       background: url('../img/laptop/join-kid.png') no-repeat top left;
     }
 
@@ -63,7 +63,6 @@
 
   &__container {
     @media screen and (min-width: $tablet-width) {
-
       position: absolute;
       top: 109px;
       right: 35px;

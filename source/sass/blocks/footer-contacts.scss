@@ -1,0 +1,146 @@
+.footer-contacts {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $gray-border;
+
+  @media screen and (min-width: $tablet-width) {
+    padding-top: 15px;
+    padding-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+
+  &__logo {
+    margin-right: 20px;
+    @media screen and (min-width: $tablet-width) {
+      margin-right: 38px;
+      img {
+        width: 70px;
+        height: 68px;
+      }
+    }
+    @media screen and (min-width: $laptop-width) {
+      margin-right: 50px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      margin-right: 33px;
+      img {
+        width: 86px;
+        height: 84px;
+      }
+
+    }
+  }
+
+  &__point {
+    display: flex;
+    margin-bottom: 13px;
+    max-width: 400px;
+
+
+    &--social {
+      margin-left: 80px;
+
+      font-family: $Roboto;
+      font-weight: 300;
+      line-height: 17px;
+      font-size: 13px;
+      letter-spacing: 0.02em;
+
+      color: $white;
+
+      flex-basis: 50%;
+      @media screen and (min-width: $tablet-width) {
+        padding-top: 14px;
+        justify-content: flex-end;
+        span {
+          display: inline-block;
+          width: 92px;
+          margin-right: 0 !important;
+          font-size: 13px;
+          line-height: 17px;
+        }
+      }
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $tablet-width) {
+      align-self: flex-start;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      margin-top: 7px;
+    }
+  }
+
+  span, a {
+    margin-top: 5px;
+    margin-bottom: 7px;
+    font-family: $Roboto;
+    font-weight: 300;
+    line-height: 18px;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+
+    color: $white;
+
+    @media screen and (min-width: $tablet-width) {
+      margin-right: 10px;
+    }
+  }
+
+  a:hover,
+  a:focus {
+    color: $red;
+  }
+
+  &__social {
+    display: flex;
+    align-items: flex-start;
+    margin-right: 30px;
+
+    a {
+      display: block;
+      text-decoration: none;
+      padding: 5px 8px;
+      font-size: 0;
+
+      svg {
+        fill: $white;
+      }
+
+      &:hover,
+      &:focus {
+        svg {
+          fill: $red;
+        }
+      }
+    }
+
+    @media screen and (min-width: $tablet-width) {
+      margin-right: 0;
+
+      a {
+        margin-right: 0;
+        margin-left: 14px;
+        padding: 5px 0;
+      }
+
+    }
+    @media screen and (min-width: $laptop-width) {
+      margin-top: 10px;
+    }
+  }
+}

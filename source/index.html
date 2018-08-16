@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,13 +16,12 @@
   <!--<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">-->
   <!--<meta name="msapplication-TileColor" content="#da532c">-->
   <!--<meta name="theme-color" content="#ffffff">-->
-  <style>
-    body {
-      background: url('1440.jpg') no-repeat center top;
-      opacity: 0.7;
-    }
-  </style>
-
+  <!--<style>-->
+    <!--body {-->
+      <!--background: url('1024.jpg') no-repeat center 10px;-->
+      <!--opacity: 0.8;-->
+    <!--}-->
+  <!--</style>-->
 </head>
 <body class="_menu">
 <div class="hidden">
@@ -39,18 +38,17 @@
       </button>
       <ul class="page-nav__menu main-menu j-menu">
         <li class="main-menu__item"><a href="#" class="main-menu__link j-menu-link">Команда</a></li>
-        <li class="main-menu__item"><a href="#" class="main-menu__link j-menu-link">Тренеры</a></li>
+        <li class="main-menu__item"><a href="trainers.html" class="main-menu__link j-menu-link">Тренеры</a></li>
         <li class="main-menu__item"><a href="#" class="main-menu__link j-menu-link">Расписание</a></li>
         <li class="main-menu__item"><a href="#" class="main-menu__link j-menu-link">Турниры</a></li>
         <li class="main-menu__item"><a href="#" class="main-menu__link j-menu-link">Новости</a></li>
-        <li class="main-menu__item"><a href="#" class="main-menu__link j-menu-link">Контакты</a></li>
+        <li class="main-menu__item"><a href="contacts.html" class="main-menu__link j-menu-link">Контакты</a></li>
       </ul>
     </nav>
   </div>
 </header>
-<main class="index-main">
+<main>
   <section class="our-team">
-
       <h1 class="visually-hidden">Спортивная школа «Ва-банк»</h1>
       <div class="our-team__header">
         <div class="container">
@@ -79,7 +77,7 @@
             <li class="join-block__item">Стоимость – 3000 рублей в месяц</li>
             <li class="join-block__item">Первое пробное занятие — бесплатно</li>
           </ul>
-          <button class="button button--wide join-block__button j-modal-button" type="button">Записаться на занятие
+          <button class="button button--wide join-block__button j-modal-link" rel="appointment-modal" type="button">Записаться на занятие
           </button>
         </div>
       </div>
@@ -278,18 +276,18 @@
       </div>
       <ul class="teachers__list">
         <li class="teachers__item">
-          <a href="" class="teachers__link j-modal-link">
+          <a href="" rel="trainers-modal" class="teachers__link">
             <div class="teachers__img">
-              <img src="img/teacher.png" alt="" width="213" height="227">
+              <img src="img/teacher1.png" alt="" width="251" height="228">
             </div>
             <span class="teachers__name"><span class="teachers__surname">Барышев</span> Эдуард Викторович </span>
             <span class="teachers__position">Тренер взрослой группы по футболу</span>
           </a>
         </li>
         <li class="teachers__item">
-          <a href="" class="teachers__link j-modal-link">
+          <a href="" class="teachers__link">
             <div class="teachers__img">
-              <img src="img/teacher2.png" alt="" width="217" height="232">
+              <img src="img/teacher2.png" alt="" width="257" height="274">
             </div>
             <span class="teachers__name"><span
               class="teachers__surname">Константинов</span>Константин Константинович </span>
@@ -297,18 +295,18 @@
           </a>
         </li>
         <li class="teachers__item">
-        <a href="" class="teachers__link j-modal-link">
+        <a href="" class="teachers__link">
           <div class="teachers__img">
-            <img src="img/teacher.png" alt="" width="213" height="227">
+            <img src="img/teacher1.png" alt="" width="251" height="228">
           </div>
           <span class="teachers__name"><span class="teachers__surname">мазун </span> Василий алексеевич</span>
           <span class="teachers__position">Тренер взрослой группы по футболу</span>
         </a>
       </li>
-        <li class="teachers__item">
-          <a href="" class="teachers__link j-modal-link">
+        <li class="teachers__item teachers__item--mobile-none">
+          <a href="" class="teachers__link">
             <div class="teachers__img">
-              <img src="img/teacher.png" alt="" width="213" height="227">
+              <img src="img/teacher2.png" alt="" width="257" height="274">
             </div>
             <span class="teachers__name"><span class="teachers__surname">скороходов</span> александр алексеевич</span>
             <span class="teachers__position">Тренер взрослой группы по футболу</span>
@@ -446,7 +444,7 @@
               </a>
             </li>
           </ul>
-          <a class="button button--arrow partners__button" href="">Присоединяйтесь</a>
+          <a class="button button--arrow partners__button j-modal-link" data-id="partners-modal" rel="partners-modal" href="">Присоединяйтесь</a>
         </div>
       </div>
       <div class="partners__offer offer">
@@ -479,23 +477,23 @@
 </main>
 <footer class="page-footer">
   <div class="container">
-    <section class="contacts">
+    <section class="footer-contacts">
       <h3 class="visually-hidden">Контакты</h3>
-      <div class="contacts__point">
-        <div class="contacts__logo">
+      <div class="footer-contacts__point">
+        <div class="footer-contacts__logo">
           <img src="img/logo.svg" alt="Спортивная школа «Ва-банк»" width="60" height="58">
         </div>
-        <div class="contacts__text">
+        <div class="footer-contacts__text">
           <span>г. Томск, ул. Говорова, д. 19В</span>
           <a href="tel:+73822211195">8 (3822) 2-111-95</a>
           <a href="mailto:info@fcva-bank.ru">info@fcva-bank.ru</a>
         </div>
       </div>
-      <div class="contacts__point contacts__point--social">
-        <div class="contacts__text">
+      <div class="footer-contacts__point footer-contacts__point--social">
+        <div class="footer-contacts__text">
           <span>Больше о нас в&nbsp;соц.сетях</span>
         </div>
-        <div class="contacts__social">
+        <div class="footer-contacts__social">
           <a href="https://vk.com/" target="_blank">
             <svg width="24" height="12" role="img">
               <use xlink:href="#vk-icon"></use>
@@ -510,69 +508,16 @@
 
       </div>
     </section>
-    <div class="contacts__copyright copyright">
+    <div class="footer-contacts__copyright copyright">
       <p>Copyright © 2018 Футбольная Школа «Ва-Банк»</p>
       <p class="redramka"><a href="https://redramka.ru/" target="_blank">Разработка сайта <span
         class="redramka__brand">Красная рамка</span></a></p>
     </div>
   </div>
 </footer>
-<div class="modal ">
-  <div class="modal__block">
-    <div style="display: none;" id="partner-info" class="partner-info">
-      <div class="contianer">
-        <h2 class="partner-info__title">Информация для&nbsp;партнеров</h2>
-        <p>
-          Футбольный клуб «Уфа» предлагает Вам несколько форм взаимовыгодного сотрудничества:
-        </p>
-        <p>
-          «ПАРТНЕР ФК «УФА» (разовое размещение информации);
-          «ПРОФИЛЬНЫЙ ПАРТНЕР ФК «УФА» (пример: «Заповедный родник» - питьевой партнер ФК «Уфа»);
-          «ИНФОРМАЦИОННЫЙ ПАРТНЕР ФК «УФА»;
-          «ОФИЦИАЛЬНЫЙ ПАРТНЕР ФК «УФА»;
-          «ГЕНЕРАЛЬНЫЙ ПАРТНЕР ФК «УФА».
-          Маркетинговые и рекламные возможности Футбольного клуба «Уфа» перечисленны в разделе Виды рекламы.\
-        </p>
-        <p>
-          По всем возникающим вопросам (проведение личной встречи, подробности, стоимость, объемы «партнерских пакетов»,
-          эксклюзивные и дополнительные возможности, бартер, совместные мероприятия и проекты) По всем возникающим
-          вопросам (проведение личной встречи, подробности, стоимость, объемы «партнерских пакетов», эксклюзивные и
-          дополнительные возможности, бартер, совместные мероприятия и проекты)
-        </p>
-        <form action="#" class="partner-info__form form" method="post">
-          <legend class="partner-info__legend">Оставьте заявку и мы свяжемся с вами в ближайшее время</legend>
-          <div class="form__field">
-            <label class="visually-hidden" for="partner-org">Организация</label>
-            <input type="text" class="form__input" placeholder="Организация" id="partner-org" name="partner-org"
-                   required>
-          </div>
-          <div class="form__field">
-            <label class="visually-hidden" for="partner-email">Email</label>
-            <input type="text" class="form__input" placeholder="Email" id="partner-email" name="partner-email" required>
-          </div>
-          <div class="form__field">
-            <label class="visually-hidden" for="partner-contact">Контактное лицо</label>
-            <input type="text" class="form__input" placeholder="Контактное лицо" id="partner-contact"
-                   name="partner-contact" required>
-          </div>
-          <div class="form__field">
-            <label class="visually-hidden" for="partner-phone">Телефон</label>
-            <input type="tel" class="form__input" placeholder="Телефон" id="partner-phone" name="partner-phone"
-                   required>
-          </div>
-          <div class="form__field">
-            <input type="checkbox" class="visually-hidden form__input--checkbox " id="partner-agree"
-                   name="partner-agree" required>
-            <label for="partner-agree" class="form__label--checkbox"> Я согласен на обработку персональных данных
-            </label>
-          </div>
-          <button class="button partner-info__button button--wide" type="submit">Отправить заявку</button>
-        </form>
-      </div>
-
-
-    </div>
-    <div id="appointment-modal" class="appointment-modal">
+<div class="modal j-modal" id="appointment-modal">
+  <div class="modal__block modal__block--narrow j-modal-block">
+    <div class="j-modal-inner appointment-modal">
       <form action="#" class="appointment__form form" method="post">
         <p class="appointment__title"> Запишись на первое
           <strong>Бесплатное занятие</strong>
@@ -605,8 +550,97 @@
     <button class="modal__close j-modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </div>
 </div>
+<div class="modal j-modal" id="partners-modal">
+  <div class="modal__block j-modal-block">
+    <div id="partner-info" class="j-modal-inner partner-info">
+      <div class="contianer">
+        <h2 class="partner-info__title">Информация для&nbsp;партнеров</h2>
+        <p>
+          Футбольный клуб «Уфа» предлагает Вам несколько форм взаимовыгодного сотрудничества:
+        </p>
+        <p>
+          «ПАРТНЕР ФК «УФА» (разовое размещение информации);
+          «ПРОФИЛЬНЫЙ ПАРТНЕР ФК «УФА» (пример: «Заповедный родник» - питьевой партнер ФК «Уфа»);
+          «ИНФОРМАЦИОННЫЙ ПАРТНЕР ФК «УФА»;
+          «ОФИЦИАЛЬНЫЙ ПАРТНЕР ФК «УФА»;
+          «ГЕНЕРАЛЬНЫЙ ПАРТНЕР ФК «УФА».
+          Маркетинговые и рекламные возможности Футбольного клуба «Уфа» перечисленны в разделе Виды рекламы.\
+        </p>
+        <p>
+          По всем возникающим вопросам (проведение личной встречи, подробности, стоимость, объемы «партнерских пакетов»,
+          эксклюзивные и дополнительные возможности, бартер, совместные мероприятия и проекты) По всем возникающим
+          вопросам (проведение личной встречи, подробности, стоимость, объемы «партнерских пакетов», эксклюзивные и
+          дополнительные возможности, бартер, совместные мероприятия и проекты)
+        </p>
+        <form action="#" class="partner-info__form form" method="post">
+          <legend class="partner-info__legend">Оставьте заявку и мы свяжемся с вами в&nbsp;ближайшее время</legend>
+          <div class="form__tablet-row">
+            <div class="form__tablet-column">
+              <div class="form__field">
+                <label class="visually-hidden" for="partner-org">Организация</label>
+                <input type="text" class="form__input" placeholder="Организация" id="partner-org" name="partner-org"
+                       required>
+              </div>
+            </div>
+            <div class="form__tablet-column">
+              <div class="form__field">
+                <label class="visually-hidden" for="partner-email">Email</label>
+                <input type="text" class="form__input" placeholder="Email" id="partner-email" name="partner-email" required>
+              </div>
+            </div>
+          </div>
+          <div class="form__tablet-row">
+            <div class="form__tablet-column">
+              <div class="form__field">
+                <label class="visually-hidden" for="partner-contact">Контактное лицо</label>
+                <input type="text" class="form__input" placeholder="Контактное лицо" id="partner-contact"
+                       name="partner-contact" required>
+              </div>
+            </div>
+            <div class="form__tablet-column">
+              <div class="form__field">
+                <label class="visually-hidden" for="partner-phone">Телефон</label>
+                <input type="tel" class="form__input" placeholder="Телефон" id="partner-phone" name="partner-phone"
+                       required>
+              </div>
+            </div>
+          </div>
+          <div class="form__field">
+            <input type="checkbox" class="visually-hidden form__input--checkbox " id="partner-agree"
+                   name="partner-agree" required>
+            <label for="partner-agree" class="form__label--checkbox"> Я согласен на обработку персональных данных
+            </label>
+          </div>
+          <button class="button partner-info__button button--wide" type="submit">Отправить заявку</button>
+        </form>
+      </div>
+    </div>
+    <button class="modal__close j-modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+  </div>
+</div>
+<div class="modal j-modal" id="trainers-modal">
+  <div class="modal__block modal__block--teachers j-modal-block">
+    <div  class="teachers__modal" id="trainer-1">
+      <div class="teachers__info">
+        <div class="teachers__img">
+          <img src="img/teacher1.png" alt="" width="251" height="228">
+        </div>
+        <div class="teachers__text">
+          <span class="teachers__name"><span class="teachers__surname">мазун </span> Василий алексеевич</span>
+          <span class="teachers__position">Тренер взрослой группы по&nbsp;футболу</span>
+        </div>
+
+      </div>
+      <div class="teachers__about">
+        <p>Выступал за команду мастеров, защищая честь Томской области, вплоть до 1993 года. Был одним из лидеров томской команды, провел в общей сложности 272 официальных матча, забил 27 голов.</p>
+        <p>После завершения футбольной карьеры перешел на тренерскую работу, которой бессменно занимается уже больше 20 лет. Есть его тренерский вклад в достижения команды «Томь» последних десятилетий: серебряных медалей 1994 и 1996 годов, золотых медалей 1997 года (вторая лига российского футбола), бронзовых медалей первого дивизиона 2002 и 2003 годов, серебряных медалей и завоевание путевки в премьер-лигу 2004 года.</p>
+      </div>
 
 
+    </div>
+    <button class="modal__close j-modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+  </div>
+</div>
 <script src="js/all.js"></script>
 </body>
 </html>

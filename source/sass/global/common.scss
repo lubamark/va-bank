@@ -4,6 +4,7 @@ body {
   position: relative;
   min-width: $mobile-width;
   width: 100%;
+  overflow-x: hidden;
 
   box-sizing: border-box;
   font-family: 'Roboto', Arial, sans-serif;
@@ -13,19 +14,9 @@ body {
   color: $black;
   background: url('../img/noisy-texture.png') repeat top left;
 
-  p {
-    margin: 10px 0 18px 0;
-    padding: 0;
-    font-family: $Roboto;
-    font-weight: 400;
-    line-height: 20px;
-    font-size: 14px;
-
-    color: $black;
-  }
-
   &._menu {
     height: 100vh;
+    right: 17px;
     overflow: hidden;
     &::before {
       content: '';
@@ -35,10 +26,20 @@ body {
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: 5;
+      z-index: 10;
 
       background-color: #2A2A2A;
       opacity: 0.9;
+    }
+
+    @media screen and (min-width: $laptop-width) {
+      height: auto;
+      overflow-y: visible;
+      overflow-x:hidden;
+      padding: 0;
+      &::before {
+        content: none;
+      }
     }
   }
 }
@@ -50,6 +51,49 @@ body {
 *:focus,
 *:hover {
   outline: none;
+}
+
+a, button {
+  cursor: pointer;
+}
+p {
+  margin: 10px 0 18px 0;
+  padding: 0;
+  font-family: $Roboto;
+  font-weight: 400;
+  line-height: 21px;
+  font-size: 14px;
+
+  color: $black;
+
+  @media screen and (min-width: $desktop-width) {
+    font-size: 15px;
+    line-height: 23px;
+
+  }
+}
+h1 {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  font-family: $Oswald;
+  font-weight: 500;
+  line-height: 53px;
+  font-size: 36px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 20px;
+    font-size: 44px;
+    line-height: 65px;
+
+  }
+  @media screen and (min-width: $laptop-width){
+    margin-bottom: 4px;
+    font-size: 50px;
+    line-height: 74px;
+}
 }
 
 .hidden {
@@ -69,61 +113,12 @@ body {
   overflow: hidden;
 }
 
-a, button {
-  cursor: pointer;
-}
 
-
-.h1 {
-  font-family: $Oswald;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 91px;
-  font-size: 72px;
-  text-transform: uppercase;
-}
-
-.h2 {
-  font-family: $Oswald;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 63px;
-  font-size: 50px;
-  text-transform: uppercase;
-}
-
-.h3 {
-  font-family: $Oswald;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 45px;
-  font-size: 36px;
-  text-transform: uppercase;
-}
-
-.h4 {
-  font-family: $Oswald;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 25px;
-  font-size: 20px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-
-.h5 {
-  font-family: $Oswald;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 23px;
-  font-size: 18px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
 
 .container {
   padding: 0 20px;
   margin: 0 auto;
+  max-width: 1160px;
 
   @media screen and (min-width: $tablet-width) {
     padding: 0 35px;
@@ -133,7 +128,6 @@ a, button {
     padding: 0 23px;
   }
   @media screen and (min-width: $desktop-width) {
-    max-width: 1160px;
     padding: 0;
   }
 }
@@ -175,8 +169,13 @@ a, button {
 
   &--wide {
     width: 100%;
+    max-width: 300px;
     font-size: 20px;
     padding: 17px 7px 13px 7px;
+
+    @media screen and (min-width: $laptop-width) {
+      max-width: 330px;
+    }
   }
 }
 .link-red {
@@ -216,7 +215,6 @@ a, button {
       }
     }
   }
-
   &:hover,
   &:focus {
     color: $red-hover;

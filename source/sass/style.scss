@@ -26,10 +26,19 @@
 @import 'blocks/partners';
 @import 'blocks/offer';
 @import 'blocks/page-footer';
-@import 'blocks/contacts';
+@import 'blocks/footer-contacts';
 @import 'blocks/copyright';
 
+//модалки
 @import 'blocks/banner';
 @import 'blocks/modal';
 @import 'blocks/partner-info';
+
+//внутренние страницы
+@import 'blocks/inner-page';
+@import 'blocks/breadcrumbs';
+@import 'blocks/contacts';
+@import 'blocks/feedback';
+@import 'blocks/map';
+
 

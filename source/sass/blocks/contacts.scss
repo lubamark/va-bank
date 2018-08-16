@@ -1,127 +1,79 @@
 .contacts {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid $gray-border;
+  &__block {
+    margin-bottom: 27px;
 
-  @media screen and (min-width: $tablet-width) {
-    padding-top: 15px;
-    padding-bottom: 16px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__logo {
-    margin-right: 20px;
     @media screen and (min-width: $tablet-width) {
-      margin-right: 38px;
-      img {
-        width: 70px;
-        height: 68px;
+      margin-bottom: 12px;
+      .container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
       }
     }
     @media screen and (min-width: $laptop-width) {
-      margin-right: 50px;
+      padding-top: 16px;
+      .container {
+        display: block;
+        padding: 0;
+      }
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      margin-bottom: 28px;
     }
   }
 
   &__point {
-    display: flex;
-    margin-bottom: 13px;
-    max-width: 400px;
+      margin-bottom: 18px;
+  }
+  &__title {
+    display: block;
+    margin: 0;
+    padding: 0;
 
+    font-family: $Oswald;
+    line-height: 35px;
+    font-size: 18px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
 
-    &--social {
-      margin-left: 80px;
-
-      font-family: $Roboto;
-      font-weight: 300;
-      line-height: 17px;
-      font-size: 13px;
-      letter-spacing: 0.02em;
-
-      color: $white;
-
-      flex-basis: 50%;
-      @media screen and (min-width: $tablet-width) {
-        padding-top: 14px;
-        justify-content: flex-end;
-        span {
-          display: inline-block;
-          width: 92px;
-          margin-right: 0 !important;
-          font-size: 13px;
-          line-height: 17px;
-        }
-      }
+    @media screen and (min-width: $laptop-width) {
+      line-height: 39px;
+      font-size: 20px;
     }
   }
-
-  &__text {
-    display: flex;
-    flex-direction: column;
-
-    @media screen and (min-width: $tablet-width) {
-      align-self: flex-start;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-  }
-
-  span, a {
-    margin-top: 5px;
-    margin-bottom: 7px;
+  &__content,
+  &__tel,
+  &__email {
     font-family: $Roboto;
-    font-weight: 300;
-    line-height: 18px;
-    font-size: 14px;
-    letter-spacing: 0.02em;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 18px;
 
-    color: $white;
+    color: $black;
 
-    @media screen and (min-width: $tablet-width) {
-      margin-right: 10px;
+    @media screen and (min-width: $laptop-width) {
+      line-height: 30px;
+      font-size: 20px;
     }
   }
-
-  a:hover,
-  a:focus {
-    color: $red;
+  &__tel {
+    text-decoration: none;
   }
 
-  &__social {
-    display: flex;
-    align-items: flex-start;
-    margin-right: 30px;
-
-    a {
-      display: block;
-      text-decoration: none;
-      padding: 5px 8px;
-      font-size: 0;
-
-      svg {
-        fill: $white;
-      }
-
-      &:hover,
-      &:focus {
-        svg {
-          fill: $red;
-        }
-      }
+  &__container {
+    @media screen and (min-width: $laptop-width) {
+      position: relative;
+      padding: 0 23px;
+      display: flex;
+      justify-content: space-between;
+      max-width: 1160px;
+      margin-right: auto;
+      margin-left: auto;
     }
-
-    @media screen and (min-width: $tablet-width) {
-      margin-right: 0;
-
-      a {
-        margin-right: 0;
-        margin-left: 14px;
-        padding: 5px 0;
-      }
+    @media screen and (min-width: $desktop-width) {
+      padding: 0;
 
     }
   }
-
-
 }

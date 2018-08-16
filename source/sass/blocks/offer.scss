@@ -5,12 +5,19 @@
   background-color: $white;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
 
+  .container {
+    margin-left: 0;
+    max-width: 400px;
+  }
+
   @media screen and (min-width: $tablet-width) {
     width: 340px;
+
     flex-shrink: 0;
     padding-bottom: 35px;
 
     .container {
+      max-width: 100%;
       padding: 0 25px 0 27px;
     }
   }
@@ -21,6 +28,15 @@
 
     .container {
       padding: 0 30px 0 33px;
+    }
+  }
+  @media screen and (min-width: $desktop-width) {
+    margin-top: 20px;
+    padding-bottom: 58px;
+    width: 570px;
+
+    .container {
+      padding: 0 40px 0 44px;
     }
   }
 
@@ -49,7 +65,11 @@
       width: 190px;
       height: 190px;
     }
-
+    @media screen and (min-width: $desktop-width) {
+      top: -60px;
+      width: 220px;
+      height: 220px;
+    }
   }
 
 
@@ -87,6 +107,15 @@
       }
     }
 
+    @media screen and (min-width: $desktop-width) {
+      margin-bottom: 14px;
+    }
+
+    @media screen and (min-width: $laptop-width) {
+      line-height: 21px;
+      font-size: 14px;
+    }
+
   }
 
   &__title {
@@ -113,6 +142,11 @@
       line-height: 46px;
       font-size: 28px;
     }
+
+    @media screen and (min-width: $desktop-width) {
+      margin-bottom: 25px;
+      font-size: 30px;
+    }
   }
 
   &__list {
@@ -138,6 +172,17 @@
     @media screen and (min-width: $tablet-width) {
       padding-left: 23px;
       margin-bottom: 12px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      padding-left: 26px;
+      margin-bottom: 23px;
+
+      line-height: 23px;
+      font-size: 15px;
+
+      background-size: 15px;
+
     }
   }
 

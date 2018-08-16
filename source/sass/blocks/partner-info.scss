@@ -11,6 +11,11 @@
     text-transform: uppercase;
 
     color: $black;
+
+    @media screen and (min-width: $laptop-width) {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
   }
 
   &__legend {
@@ -22,5 +27,22 @@
     font-size: 22px;
 
     color: $black;
+
+    @media screen and (min-width: $tablet-width) {
+      line-height: 31px;
+    }
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    .form__label--checkbox {
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (min-width: $laptop-width) {
+    &__form {
+      margin-top: 50px;
+    }
   }
 }

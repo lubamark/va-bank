@@ -22,7 +22,9 @@
 
     @media screen and (min-width: $desktop-width) {
       padding-top: 91px;
-      padding-bottom: 103px;
+      padding-bottom: 107px;
+      background: url('../img/desktop/history-bg.jpg') no-repeat top left;
+      background-size: cover;
 
       .container {
         position: relative;
@@ -60,19 +62,23 @@
       font-size: 26px;
       line-height: 39px;
     }
-
     @media screen and (min-width: $laptop-width) {
       margin-bottom: 30px;
       padding-top: 56px;
       font-size: 32px;
       line-height: 47px;
-
     }
-
     @media screen and (min-width: $desktop-width) {
       font-size: 36px;
+      line-height: 53px;
       padding-right: 40px;
+      padding-top: 53px;
       padding-left: 0;
+      &::before {
+        height: 24px;
+        width: 29px;
+        background-size: cover;
+      }
     }
 
   }
@@ -102,6 +108,10 @@
       padding-top: 46px;
       padding-bottom: 53px;
       background-position: 52px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      padding-top: 64px;
     }
   }
   &__list {
@@ -157,6 +167,13 @@
       }
     }
 
+    @media screen and (min-width: $desktop-width){
+      &::after {
+        top: 29px;
+        right: -85px;
+        width: 100px;
+      }
+    }
   }
   &__date {
     margin-right: 14px;
@@ -176,6 +193,10 @@
       font-size: 56px;
     }
 
+    @media screen and (min-width: $desktop-width) {
+      font-size: 60px;
+    }
+
   }
   &__description {
     margin-bottom: 5px;
@@ -193,6 +214,11 @@
       font-size: 13px;
       font-weight: 500;
     }
+
+    @media screen and (min-width: $desktop-width) {
+    line-height: 23px;
+    font-size: 15px;
+  }
   }
 
   &__header {
@@ -202,6 +228,7 @@
     }
     @media screen and (min-width: $desktop-width) {
       width: 475px;
+
 
     }
   }

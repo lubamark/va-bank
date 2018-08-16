@@ -1,6 +1,6 @@
 .page-nav {
   position: relative;
-  padding: 15px 0;
+  padding: 15px 0 11px 0;
 
   display: flex;
   flex-direction: row;
@@ -8,7 +8,7 @@
   align-items: center;
 
   @media screen and (min-width: $laptop-width) {
-    padding: 22px 0;
+    padding: 16px 0;
   }
   @media screen and (min-width: $desktop-width) {
     padding: 13px 0;
@@ -20,8 +20,8 @@
 
     @media screen and (min-width: $tablet-width) {
       img {
-        width: 70px;
-        height: 68px;
+        width: 75px;
+        height: 75px;
       }
     }
     @media screen and (min-width: $laptop-width) {
@@ -146,7 +146,7 @@
           padding-left: 22px;
         }
 
-        @media screen and (min-width: $tablet-width) {
+        @media screen and (min-width: $laptop-width) {
           position: static;
           background-color: transparent;
         }

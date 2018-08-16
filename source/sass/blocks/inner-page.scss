@@ -1,0 +1,63 @@
+.inner-page {
+  min-height: calc(100vh - 360px);
+  padding-top: 87px;
+
+  @media screen and (min-width: $tablet-width) {
+    padding-top: 110px;
+
+    min-height: calc(100vh - 226px);
+  }
+  @media screen and (min-width: $laptop-width) {
+    padding-top: 119px;
+
+    min-height: calc(100vh - 210px);
+  }
+  @media screen and (min-width: $desktop-width) {
+    padding-top: 121px;
+  }
+
+  &__header {
+
+    @media screen and (min-width: $tablet-width) {
+      position: relative;
+      padding-top: 28px;
+    }
+
+    @media screen and (min-width: $laptop-width) {
+      padding-top: 39px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      padding-top: 35px;
+    }
+
+  }
+
+  &__back {
+    display: inline-block;
+    padding-left: 19px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    font-family: $Roboto;
+    font-weight: 400;
+    line-height: 18px;
+    font-size: 12px;
+    color: $black;
+    text-decoration: none;
+
+    background: url('../../img/icon/arrow-left-icon.svg') no-repeat left 21px;
+
+    @media screen and (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &__breadcrumbs {
+    display: none;
+
+    @media screen and (min-width: $tablet-width) {
+      display: inline-block;
+    }
+  }
+}
