@@ -1,0 +1,132 @@
+.news-page {
+  &__list {
+    @include list-reset;
+  }
+  &__list {
+    @media screen and (min-width: $tablet-width) {
+      display: flex;
+      flex-wrap: wrap;
+
+      .news__main {
+        width: 100%;
+      }
+    }
+  }
+
+  &__pagination {
+    margin-top: 40px;
+  }
+  &__item {
+    margin-bottom: 20px;
+    margin-right: 0;
+    .banner {
+      margin-top: 0;
+      margin-bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      flex-shrink: 0;
+      a {
+        display: block;
+      }
+      .news__img {
+        width: 100%;
+        height: 125px;
+        img {
+          display: block;
+          height: auto;
+        }
+      }
+      .news__text {
+        padding: 10px 20px 16px 20px;
+      }
+      .news__title {
+        margin: 0;
+        padding: 0;
+        font-family: $Roboto;
+        font-weight: 500;
+        line-height: 23px;
+        font-size: 16px;
+
+        color: $black;
+      }
+    }
+    &:last-child {
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+      width: 48%;
+      flex-grow: 1;
+      &:nth-child(1),
+      &:nth-child(2) {
+        .news__text {
+          padding: 12px 22px 25px;
+          height: 118px;
+        }
+        .news__title {
+          line-height: 26px;
+          font-size: 20px;
+        }
+        .news__img {
+          height: 153px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      &:nth-child(2n + 1) {
+        margin-right: 18px;
+      }
+    }
+
+    @media screen and (min-width: $laptop-width) {
+      width: 32%;
+      flex-grow: 0;
+      margin-right: 18px;
+
+      &:nth-child(3) {
+        a {
+          flex-direction: column;
+        }
+        .news__img {
+          width: 100%;
+        }
+      }
+
+      &:nth-child(2) {
+        margin-right: 18px;
+      }
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        height: 255px;
+        .news__img {
+          height: 142px;
+        }
+        .news__title {
+          line-height: 25px;
+          font-size: 18px;
+        }
+        .news__text {
+          padding-top: 14px;
+          height: 113px;
+        }
+      }
+
+      &:nth-child(2) {
+        margin-right: 18px;
+      }
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+
+    @media screen and (min-width: $desktop-width) {
+    }
+  }
+}

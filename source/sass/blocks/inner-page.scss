@@ -1,15 +1,28 @@
 .inner-page {
   min-height: calc(100vh - 360px);
   padding-top: 87px;
+  padding-bottom: 100px;
+  &--bottom {
+    padding-bottom: 0;
+  }
+
+  &--news-item {
+    h1 {
+      font-family: $Roboto;
+      font-weight: 500;
+      line-height: 31px;
+      font-size: 24px;
+      text-transform: none;
+      color: $black;
+    }
+  }
 
   @media screen and (min-width: $tablet-width) {
     padding-top: 110px;
-
     min-height: calc(100vh - 226px);
   }
   @media screen and (min-width: $laptop-width) {
     padding-top: 119px;
-
     min-height: calc(100vh - 210px);
   }
   @media screen and (min-width: $desktop-width) {
@@ -17,6 +30,7 @@
   }
 
   &__header {
+    width: 100%;
 
     @media screen and (min-width: $tablet-width) {
       position: relative;

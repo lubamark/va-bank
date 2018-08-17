@@ -1,0 +1,120 @@
+.pagination {
+  text-align: center;
+
+  @media screen and (min-width: $tablet-width) {
+    text-align: left;
+  }
+
+  &__block {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__divide {
+    display: inline-block;
+    //margin-left: 8px;
+    //margin-right: 8px;
+    @media screen and (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &__list {
+    @include list-reset;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right: 3px;
+    margin-left: 3px;
+
+
+    font-family: $Oswald;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    &:nth-child(n + 2) {
+      display: none;
+    }
+
+    &:last-child {
+      display: inline-block;
+    }
+
+    color: $black;
+
+    &._active {
+      .pagination__link {
+        color: $white;
+        background-color: $red;
+      }
+    }
+
+    @media screen and (min-width: $tablet-width) {
+      &:nth-child(n + 2) {
+      display: inline-block;
+    }
+  }
+  }
+
+
+  &__toggler {
+    position: relative;
+
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 11px;
+
+      width: 7px;
+      height: 7px;
+
+      border-left: 2px solid $black;
+      border-bottom: 2px solid $black;
+      transform-origin: center;
+    }
+    &--prev::before {
+      transform: rotate(45deg);
+    }
+    &--next::before {
+      transform: rotate(-135deg);
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        border-color: $red
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 6px 12px 4px 12px;
+
+    text-decoration: none;
+    color: $black;
+    &:hover,
+    &:focus {
+      color: $red;
+    }
+
+    &:active {
+      color: $white;
+      background-color: $red;
+    }
+  }
+}

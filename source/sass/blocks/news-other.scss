@@ -1,0 +1,30 @@
+.news-other {
+  display: none;
+    @media screen and (min-width: $laptop-width) {
+      display: block;
+      max-width: 305px;
+
+      .banner {
+        max-width: 305px;
+      }
+
+      .news__list--small {
+        box-shadow: none;
+      }
+
+      .news__item {
+        background-color: transparent;
+        width: 100%;
+      }
+      .news__text {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    @media screen and (min-width: $desktop-width) {
+    max-width: 355px;
+    .banner {
+      max-width: 355px;
+    }
+  }
+}
