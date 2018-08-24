@@ -10,6 +10,7 @@
       background-size: cover;
       .container {
         display: flex;
+        position: relative;
       }
     }
     @media screen and (min-width: $laptop-width) {
