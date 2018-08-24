@@ -30,7 +30,7 @@
       }
     }
     @media screen and(min-width: $laptop-width) {
-      margin-right: 12px;
+      margin-right: 18px;
       min-width: 316px;
 
       &--small {
@@ -199,16 +199,14 @@
       margin-bottom: 0;
     }
     &--main {
-      width: 340px;
       flex-shrink: 0;
-      margin-right: 18px;
       margin-bottom: 0;
       a {
         display: block;
       }
       .news__img {
         width: 100%;
-        height: 142px;
+        height: auto;
         img {
           display: block;
           height: auto;
@@ -231,6 +229,8 @@
 
     @media screen and (min-width: $tablet-width) {
       &--main {
+        width: 340px;
+        margin-right: 18px;
         .news__text {
           padding: 12px 22px 25px;
           height: 118px;
@@ -265,7 +265,7 @@
       }
     }
     @media screen and (min-width: $desktop-width) {
-      width: 373px;
+      width: 376px;
       height: 142px;
       &--main {
         height: 300px;

@@ -1,10 +1,14 @@
 .contacts {
   &__block {
     margin-bottom: 27px;
+    .container {
+      padding: 0;
+    }
 
     @media screen and (min-width: $tablet-width) {
       margin-bottom: 12px;
       .container {
+        padding: 0;
         display: flex;
         justify-content: space-between;
         margin-bottom: 0;

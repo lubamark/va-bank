@@ -1,30 +1,18 @@
 .news-other {
-  display: none;
-    @media screen and (min-width: $laptop-width) {
-      display: block;
-      max-width: 305px;
+  &__title {
+    margin-top: 17px;
+    margin-bottom: 20px;
 
-      .banner {
-        max-width: 305px;
-      }
+    font-family: $Oswald;
+    font-weight: 500;
+    line-height: 33px;
+    font-size: 22px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
 
-      .news__list--small {
-        box-shadow: none;
-      }
-
-      .news__item {
-        background-color: transparent;
-        width: 100%;
-      }
-      .news__text {
-        padding-left: 0;
-        padding-right: 0;
-      }
-    }
     @media screen and (min-width: $desktop-width) {
-    max-width: 355px;
-    .banner {
-      max-width: 355px;
+      margin-top: 19px;
+      margin-bottom: 23px;
     }
   }
 }

@@ -1,0 +1,90 @@
+.team-intro {
+  overflow-x: visible;
+  padding-bottom: 45px;
+
+  @media screen and(min-width: $tablet-width) {
+    padding-bottom:  50px;
+  }
+
+  @media screen and(min-width: $laptop-width) {
+    padding-bottom: 40px;
+    .container {
+      display: flex;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      padding-bottom: 45px;
+      .container {
+        position: relative;
+      }
+
+    }
+  }
+
+  &__text {
+    p {
+      font-family: $Roboto;
+      line-height: 24px;
+      font-size: 16px;
+      font-weight: 400;
+
+      color: $black;
+    }
+
+    @media screen and(min-width: $laptop-width) {
+      flex-basis: 505px;
+      flex-grow: 1;
+      max-width: 535px;
+      margin-right: 71px;
+      p {
+        line-height: 35px;
+        font-size: 20px;
+      }
+    }
+    @media screen and (min-width: $desktop-width) {
+      margin-right: 120px;
+    }
+  }
+  &__img {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 51px;
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: -20px;
+      left: 34px;
+      width: 100%;
+      height: 100%;
+      background-color: $red;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+      &::after {
+        top: -20px;
+        left: 48px;
+        width: 93%;
+        height: 95%;
+      }
+    }
+    @media screen and (min-width: $laptop-width) {
+      margin-top: -20px;
+    }
+    @media screen and (min-width: $desktop-width) {
+      margin-top: -50px;
+      margin-right: -20px;
+      max-width: 500px;
+      &::after {
+        width: 96%;
+      }
+    }
+
+  }
+}

@@ -4132,15 +4132,15 @@ $(document).ready(function(){$(document).on("scroll",onScroll),$('.menu-list__li
 }));
 
 !function(){if("undefined"!=typeof window&&window.addEventListener){var e,t=Object.create(null),n=function(){clearTimeout(e),e=setTimeout(u,100)},o=function(){},i=function(){if(window.addEventListener("resize",n,!1),window.addEventListener("orientationchange",n,!1),window.MutationObserver){var e=new MutationObserver(n);e.observe(document.documentElement,{childList:!0,subtree:!0,attributes:!0}),o=function(){try{e.disconnect(),window.removeEventListener("resize",n,!1),window.removeEventListener("orientationchange",n,!1)}catch(e){}}}else document.documentElement.addEventListener("DOMSubtreeModified",n,!1),o=function(){document.documentElement.removeEventListener("DOMSubtreeModified",n,!1),window.removeEventListener("resize",n,!1),window.removeEventListener("orientationchange",n,!1)}},r=function(e){function t(e){if(void 0!==e.protocol)var t=e;else(t=document.createElement("a")).href=e;return t.protocol.replace(/:/g,"")+t.host}if(window.XMLHttpRequest){var n=new XMLHttpRequest,o=t(location);e=t(e),n=void 0===n.withCredentials&&""!==e&&e!==o?XDomainRequest||void 0:XMLHttpRequest}return n},u=function(){function e(){0==--l&&(o(),i())}function n(e){return function(){!0!==t[e.base]&&(e.useEl.setAttributeNS("http://www.w3.org/1999/xlink","xlink:href","#"+e.hash),e.useEl.hasAttribute("href")&&e.useEl.setAttribute("href","#"+e.hash))}}function u(t){return function(){var n=document.body,o=document.createElement("x");t.onload=null,o.innerHTML=t.responseText,(o=o.getElementsByTagName("svg")[0])&&(o.setAttribute("aria-hidden","true"),o.style.position="absolute",o.style.width=0,o.style.height=0,o.style.overflow="hidden",n.insertBefore(o,n.firstChild)),e()}}function s(t){return function(){t.onerror=null,t.ontimeout=null,e()}}var d,a,l=0;o();var c=document.getElementsByTagName("use");for(a=0;a<c.length;a+=1){try{var h=c[a].getBoundingClientRect()}catch(e){h=!1}var w=(d=c[a].getAttribute("href")||c[a].getAttributeNS("http://www.w3.org/1999/xlink","href")||c[a].getAttribute("xlink:href"))&&d.split?d.split("#"):["",""],f=w[0];w=w[1];var v=h&&0===h.left&&0===h.right&&0===h.top&&0===h.bottom;h&&0===h.width&&0===h.height&&!v?(c[a].hasAttribute("href")&&c[a].setAttributeNS("http://www.w3.org/1999/xlink","xlink:href",d),f.length&&(!0!==(d=t[f])&&setTimeout(n({useEl:c[a],base:f,hash:w}),0),void 0===d&&void 0!==(w=r(f))&&(d=new w,t[f]=d,d.onload=u(d),d.onerror=s(d),d.ontimeout=s(d),d.open("GET",f),d.send(),l+=1))):v?f.length&&t[f]&&setTimeout(n({useEl:c[a],base:f,hash:w}),0):void 0===t[f]?t[f]=!0:t[f].onload&&(t[f].abort(),delete t[f].onload,t[f]=!0)}c="",l+=1,e()},s=function(){window.removeEventListener("load",s,!1),e=setTimeout(u,0)};"complete"!==document.readyState?window.addEventListener("load",s,!1):s()}}();
-
-
-function initMap() {
+if(document.getElementById('map') != null) {
+  console.log (document.getElementById('map'));
+  function initMap() {
     var windowWidth = $(window).width();
-		var vaBank = {lat: 56.509442, lng: 84.9843211};
+    var vaBank = {lat: 56.509442, lng: 84.9843211};
 
-		var getCenterMap =  function (winWidth) {
-		  var center;
-		  if (winWidth > 320 && winWidth <= 767) {
+    var getCenterMap = function (winWidth) {
+      var center;
+      if (winWidth > 320 && winWidth <= 767) {
         center = {lat: 56.509442, lng: 84.9843211};
       } else if (winWidth > 767 && winWidth <= 1023) {
         center = {lat: 56.509442, lng: 84.98485};
@@ -4149,22 +4149,30 @@ function initMap() {
       } else {
         center = {lat: 56.509442, lng: 84.9855};
       }
-
       return center;
     };
     var centerMap = getCenterMap(windowWidth);
 
-		var map = new google.maps.Map(document.getElementById('map'),
-			{ zoom: 19,
-			center: centerMap });
+    var map = new google.maps.Map(document.getElementById('map'),
+      {
+        zoom: 19,
+        center: centerMap
+      });
 
-		var image = {
-		  url: '../img/icon/pin-icon.svg',
-		  size: new google.maps.Size(108,108),
+    var image = {
+      url: '../img/icon/pin-icon.svg',
+      size: new google.maps.Size(108, 108),
       origin: new google.maps.Point(0, 0),
       anchor: new google.maps.Point(54, 54)
     };
-		var marker = new google.maps.Marker({ position: vaBank, map: map, icon: image }); }
+    var marker = new google.maps.Marker({position: vaBank, map: map, icon: image});
+  }
+}
+
+
+
+
+
 
 'use strict';
 
@@ -4207,6 +4215,57 @@ $(document).ready(function () {
 
 
 
+(function () {
+  var $modalSliderI = $('.j-modal-slider-current');
+  var $modalSliderSum = $('.j-modal-slider-quantity');
+  var $modalSlick = $('.j-modal-slider-nav');
+
+  $modalSlick.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+    var i = (currentSlide ? currentSlide : 0) + 1;
+
+    if (i < 10) {
+      $modalSliderI.text('0' + i);
+    } else {
+      $modalSliderI.text(i);
+    }
+
+    if (slick.slideCount < 10 ) {
+      $modalSliderSum.text('0' + slick.slideCount);
+    } else {
+      $modalSliderSum.text(slick.slideCount);
+    }
+
+
+  });
+
+
+  $('.j-modal-slider-for').slick({
+    mobileFirst: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.j-modal-slider-nav'
+  });
+  $modalSlick.slick({
+    mobileFirst: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.j-modal-slider-for',
+    centerMode: true,
+    focusOnSelect: true,
+    variableWidth: false,
+    appendArrows: $('.j-modal-slider-controls'),
+    prevArrow: '<button class="button modal-slider__control modal-slider__control--prev"><span class="visually-hidden">Предыдущее фото</span></button>',
+    nextArrow: '<button class="button modal-slider__control modal-slider__control--next"><span class="visually-hidden">Следующее фото</span></button>',
+  });
+})();
+
+
+
+
+
+
 $(document).ready(function() {
 
     $('.j-modal').each(function () {
@@ -4215,7 +4274,7 @@ $(document).ready(function() {
     $(document).on('click', '.j-modal-link', function (e) {
         e.preventDefault();
         var $this = $(this);
-        $.event.trigger({type: 'show.popup', targetId: $this.attr('rel')});
+        $.event.trigger({type: 'show.popup', targetId: $this.attr('rel'),elem:$this});
     });
 
 });
@@ -4243,18 +4302,32 @@ Popup.prototype.init = function(){
 
     $(document).on('show.popup', function(e){
         var content = e.targetId;
-        if(content == cmp.popupContainer.attr('id')){
-          cmp.show();
-        }
+        var elem = e.elem;
 
+        if(content == cmp.popupContainer.attr('id')){
+                    cmp.show();
+        if (elem.hasClass('j-popup-ajax')) {
+          cmp.content.html('');
+          cmp.popup.addClass('_loading');
+          $.post(elem.attr('href'),{ajax:true},function(resp){
+            cmp.popup.removeClass('_loading');
+            cmp.content.html(resp);
+          });
+        }
+        }
     });
 
     $(document).on('close.popup', function(e){
         cmp.hide();
     });
 
+    $(document).on('keydown', function(e) {
+      if (e.target.keyCode = 27) {
+        cmp.hide();
+      }
+    });
+
     cmp.closeLink.on("click", function(){
-      console.log(123);
       cmp.hide();
         //return false;
     });
@@ -4268,6 +4341,7 @@ Popup.prototype.init = function(){
 };
 
 Popup.prototype.show = function (){
+  $(window).resize();
     var cmp = this;
 
     cmp.scrollTopVal = $(window).scrollTop();
@@ -4400,38 +4474,159 @@ Overlay.hide = function ()
 //     });
 // });
 
+(function () {
+  var $pageSliderSum = $('.j-slider-count');
+  var $pageSlick = $('.j-news-slider');
+
+  $pageSlick.on('init reInit afterChange', function (event, slick) {
+    if (slick.slideCount < 10 ) {
+      $pageSliderSum.text('0' + slick.slideCount);
+    } else {
+      $pageSliderSum.text(slick.slideCount);
+    }
+  });
+  $pageSlick.slick({
+    mobileFirst: true,
+    infinite: true,
+    appendArrows: $('.j-news-slider-controls'),
+    prevArrow: '<button class="button news-slider__control news-slider__control--prev"><span class="visually-hidden">Предыдущее фото</span></button>',
+    nextArrow: '<button class="button news-slider__control news-slider__control--next"><span class="visually-hidden">Следующее фото</span></button>',
+    slidesToShow: 1,
+    variableWidth: true,
+    centerMode: false,
+    speed: 800,
+    asNavFor: '.j-modal-slider-nav',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 4,
+          lazyLoaded: true,
+          variableWidth: true,
+        }
+      },
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 5,
+          variableWidth: false,
+        }
+      }
+    ]
+
+  });
+})();
+
+
+
 $('.j-select').selectric({
   nativeOnMobile: false
 });
 
-$('.j-slider').slick({
-  mobileFirst: true,
-  infinite: true,
-  appendArrows: $('.j-slider-controls'),
-  prevArrow: '<button class="button slider__control slider__control--prev"><span class="visually-hidden">Предыдущее фото</span></button>',
-  nextArrow: '<button class="button slider__control slider__control--next"><span class="visually-hidden">Следующее фото</span></button>',
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 5,
-        centerMode: false,
-        variableWidth: true,
-        speed: 800,
-        lazyLoaded: true,
-        adaptiveHeight: true
-      }
-    },
-    {
-      breakpoint: 1440,
-      settings: {
-        slidesToShow: 5,
-        centerMode: false,
-        variableWidth: true,
-        speed: 800,
-        adaptiveHeight: true
-      }
+(function () {
+  var $indexSliderI = $('.j-current-photo');
+  var $indexSliderSum = $('.j-all-photos');
+  var $indexSlick = $('.j-slider');
+
+  $indexSlick.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+    var i = (currentSlide ? currentSlide : 0) + 1;
+
+    if (i < 10) {
+      $indexSliderI.text('0' + i);
+    } else {
+      $indexSliderI.text(i);
     }
-  ]
+
+    if (slick.slideCount < 10 ) {
+      $indexSliderSum.text('0' + slick.slideCount);
+    } else {
+      $indexSliderSum.text(slick.slideCount);
+    }
+  });
+
+
+  $indexSlick.slick({
+    mobileFirst: true,
+    infinite: true,
+    appendArrows: $('.j-slider-controls'),
+    prevArrow: '<button class="button slider__control slider__control--prev"><span class="visually-hidden">Предыдущее фото</span></button>',
+    nextArrow: '<button class="button slider__control slider__control--next"><span class="visually-hidden">Следующее фото</span></button>',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          centerMode: false,
+          variableWidth: true,
+          speed: 800,
+          lazyLoaded: true,
+          adaptiveHeight: false
+        }
+      },
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 3,
+          centerMode: false,
+          variableWidth: true,
+          speed: 800,
+          lazyLoaded: true,
+          adaptiveHeight: false
+        }
+      }
+    ]
+  });
+
+
+})();
+
+
+(function () {
+
+
+  $('.j-tab-nav-slider').slick({
+    mobileFirst: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    variableWidth: false,
+    adaptiveHeight: true,
+    arrows: false,
+    customPaging : function(slider, i) {
+      var slide = $(slider.$slides[i]).find('.tabs-list__item');
+      return "<span class=\"tabs-menu__link\">" + slide.attr('data-text') + "</span>";
+    },
+    dots: true,
+    dotsClass: 'tabs-menu',
+    appendDots: '.j-tab-for-slider',
+    infinite: false,
+    swipe: false,
+  });
+})();
+
+
+$(document).ready(function () {
+  var $winH = $(window).height();
+  var $scrollT = $(window).scrollTop();
+  var $up = $('.up');
+
+  if($scrollT > $winH) {
+    $up.fadeIn()
+  } else if ($scrollT < $winH){
+    $up.fadeOut();
+  }
+
+  $(window).on('scroll', function () {
+    $scrollT = $(window).scrollTop();
+    if($scrollT > $winH) {
+      $up.fadeIn()
+    } else if ($scrollT < $winH){
+      $up.fadeOut();
+    }
+  });
+
+  $up.on('click', function () {
+    $('body,html').animate({scrollTop:0},800);
+  });
+
 
 });

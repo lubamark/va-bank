@@ -1,0 +1,30 @@
+.up {
+  position: fixed;
+  display: none;
+  bottom: 30px;
+  right: 20px;
+  z-index: 200;
+
+  width: 42px;
+  height: 42px;
+  background-color: $red;
+  border: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 19px;
+    left: 17px;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid $white;
+    border-left: 2px solid $white;
+    transform-origin: center;
+    transform: rotate(45deg);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $red-hover;
+  }
+}

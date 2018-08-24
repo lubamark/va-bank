@@ -1,0 +1,43 @@
+.newg {
+  background: $black url('../img/team/newg-bg-mobile.jpg') no-repeat top center;
+  background-size: cover;
+
+  @media screen and(min-width: $tablet-width) {
+    background: $black url('../img/team/newg-bg-tab.jpg') no-repeat top center;
+    background-size: cover;
+    &__images-cols-tablet {
+      width: 465px;
+      display: flex;
+      justify-content: space-between;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &__images-col-tablet {
+      flex-basis: 47%;
+      flex-shrink: 1;
+    }
+
+    &__images-col-tablet:first-child {
+      margin-right: 30px;
+    }
+    &__images-col-tablet:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and(min-width: $laptop-width) {
+    background: $black url('../img/team/newg-bg-lap.jpg') no-repeat top center;
+    background-size: cover;
+
+    .tabs-list__text {
+      min-height: 137px;
+    }
+  }
+
+  @media screen and(min-width: $desktop-width) {
+    background: $black url('../img/team/newg-bg-desk.jpg') no-repeat top center;
+    background-size: cover;
+  }
+}

@@ -47,7 +47,7 @@ gulp.task("serve", function() {
   gulp.watch("source/sass/**/*.{scss,sass}").on("change", server.reload);
   gulp.watch("source/*.html", ["html"]);
   gulp.watch("source/*.html").on("change", server.reload);
-  gulp.watch("source/img/**/*.{png,jpg,svg}", ["copy"]);
+  gulp.watch("source/img/**/*.{png,jpg,svg}", ["copy", "images"]);
   gulp.watch("source/img/**/*.{png,jpg,svg}").on("change", server.reload);
   gulp.watch("source/js/**/*.js", ["jsmin"]);
   gulp.watch("source/js/*.js").on("change", server.reload);
@@ -122,6 +122,7 @@ gulp.task("build", function(done){
     "clean",
     "copy",
     "style",
+    "images",
     "sprite",
     "html",
     "jsmin",

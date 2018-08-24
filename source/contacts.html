@@ -25,7 +25,7 @@
   <div class="container">
     <nav class="page-nav">
       <a class="page-nav__logo" href="..">
-        <img src="../img/logo.svg" alt='Спортивная школа «Ва-банк»' width="53" height="51">
+        <img src="img/logo.svg" alt='Спортивная школа «Ва-банк»' width="53" height="51">
       </a>
       <a href="tel:+73822211195" class="page-nav__phone">8 (3822) 2-111-95</a>
       <button class="page-nav__handler _opened j-menu-button" type="button"><span class="visually-hidden">Меню</span>
@@ -49,71 +49,78 @@
         <li class="breadcrumbs__item"><a>Контакты</a></li>
       </ul>
       <a href="../" class="inner-page__back">Назад</a>
-      <h1>Контакты</h1>
     </div>
   </section>
-  <div class="contacts">
-    <div class="contacts__container">
-      <div class="contacts__block">
-        <div class="container">
-          <div class="contacts__point">
-            <span class="contacts__title">приходите</span>
-            <span class="contacts__content">г. Томск, ул. Говорова, д. 19В</span>
-          </div>
-          <div class="contacts__point">
-            <span class="contacts__title">пишите</span>
-            <span class="contacts__content"><a href="mailto:info@fcva-bank.ru" class="contacts__email">info@fcva-bank.ru</a></span>
-          </div>
-          <div class="contacts__point">
-            <span class="contacts__title">звоните</span>
-            <span class="contacts__content"><a href="tel:+73822211195" class="contacts__tel">8 (3822) 2-111-95</a></span>
-          </div>
-        </div>
-      </div>
-      <section class="feedback">
-        <div class="feedback__container">
+  <section class="contacts">
+    <div class="container">
+      <h1>Контакты</h1>
+      <!-- -->
+      <div class="contacts__container">
+        <div class="contacts__block">
           <div class="container">
-            <form action="#" method="post" class="form feedback__form">
-              <h2 class="feedback__legend">
-                Остались вопросы?
-                Свяжитесь&nbsp;c&nbsp;нами
-              </h2>
-              <div class="form__tablet-row">
-                <div class="form__tablet-column">
-                  <div class="form__field">
-                    <label for="contacts-name" class="visually-hidden"></label>
-                    <input type="text" class="form__input _error" placeholder="Имя" name="contacts-name" id="contacts-name">
-                  </div>
-                  <div class="form__field">
-                    <label for="contacts-tel" class="visually-hidden"></label>
-                    <input type="text" class="form__input" placeholder="Телефон" name="contacts-tel" id="contacts-tel">
-                  </div>
-                  <div class="form__field">
-                    <label for="contacts-email" class="visually-hidden"></label>
-                    <input type="text" class="form__input" placeholder="Email" name="contacts-email" id="contacts-email">
-                  </div>
-                </div>
-                <div class="form__tablet-column">
-                  <div class="form__field form__field--checkbox-before">
-                    <label class="visually-hidden" for="contacts-massage">Ваше сообещние</label>
-                    <textarea name="contacts-massage" class="form__textarea" id="contacts-massage" cols="15" rows="4"  placeholder="Ваше сообщение"></textarea>
-                  </div>
-                </div>
-              </div>
-              <div class="form__field">
-                <input type="checkbox" class="visually-hidden form__input--checkbox " id="partner-agree"
-                       name="partner-agree" required>
-                <label for="partner-agree" class="form__label--checkbox"> Я согласен на обработку персональных данных
-                </label>
-              </div>
-              <button class="button feedback__button button--wide" type="submit">Отправить</button>
-            </form>
+            <div class="contacts__point">
+              <span class="contacts__title">приходите</span>
+              <span class="contacts__content">г. Томск, ул. Говорова, д. 19В</span>
+            </div>
+            <div class="contacts__point">
+              <span class="contacts__title">пишите</span>
+              <span class="contacts__content"><a href="mailto:info@fcva-bank.ru" class="contacts__email">info@fcva-bank.ru</a></span>
+            </div>
+            <div class="contacts__point">
+              <span class="contacts__title">звоните</span>
+              <span class="contacts__content"><a href="tel:+73822211195" class="contacts__tel">8 (3822) 2-111-95</a></span>
+            </div>
           </div>
         </div>
+        <section class="feedback">
+          <div class="feedback__container">
+            <div class="container">
+              <form action="#" method="post" class="form feedback__form">
+                <h2 class="feedback__legend">
+                  Остались вопросы?
+                  Свяжитесь&nbsp;c&nbsp;нами
+                </h2>
+                <div class="form__tablet-row">
+                  <div class="form__tablet-column">
+                    <div class="form__field">
+                      <label for="contacts-name" class="visually-hidden"></label>
+                      <input type="text" class="form__input _error" placeholder="Имя" name="contacts-name"
+                             id="contacts-name">
+                    </div>
+                    <div class="form__field">
+                      <label for="contacts-tel" class="visually-hidden"></label>
+                      <input type="text" class="form__input" placeholder="Телефон" name="contacts-tel"
+                             id="contacts-tel">
+                    </div>
+                    <div class="form__field">
+                      <label for="contacts-email" class="visually-hidden"></label>
+                      <input type="text" class="form__input" placeholder="Email" name="contacts-email"
+                             id="contacts-email">
+                    </div>
+                  </div>
+                  <div class="form__tablet-column">
+                    <div class="form__field form__field--checkbox-before">
+                      <label class="visually-hidden" for="contacts-massage">Ваше сообещние</label>
+                      <textarea name="contacts-massage" class="form__textarea" id="contacts-massage" cols="15" rows="4"
+                                placeholder="Ваше сообщение"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__field">
+                  <input type="checkbox" class="visually-hidden form__input--checkbox " id="partner-agree"
+                         name="partner-agree" required>
+                  <label for="partner-agree" class="form__label--checkbox"> Я согласен на обработку персональных данных
+                  </label>
+                </div>
+                <button class="button feedback__button button--wide" type="submit">Отправить</button>
+              </form>
+            </div>
+          </div>
 
-      </section>
+        </section>
+      </div>
     </div>
-  </div>
+  </section>
   <div class="map" id="map">
 
   </div>
@@ -187,7 +194,8 @@
     <button class="modal__close j-modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </div>
 </div>
-<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3gfZ_HuVHgRp7QqiZfHuft3gbYNIWPdY&amp;callback=initMap">
+<script async="" defer=""
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3gfZ_HuVHgRp7QqiZfHuft3gbYNIWPdY&amp;callback=initMap">
 </script>
 <script src="js/all.js"></script>
 </body>

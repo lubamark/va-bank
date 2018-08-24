@@ -1,0 +1,32 @@
+.team-section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 15px;
+    font-family: $Oswald;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 24px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    color: $black;
+
+    @media screen and(min-width: $tablet-width) {
+      font-size: 26px;
+      line-height: 39px;
+    }
+
+    @media screen and(min-width: $laptop-width) {
+      font-size: 32px;
+      line-height: 47px;
+    }
+
+    @media screen and(min-width: $desktop-width) {
+      font-size: 36px;
+      line-height: 53px;
+    }
+  }
+}

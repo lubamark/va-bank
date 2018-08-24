@@ -1,7 +1,5 @@
 .our-team {
   overflow-x: hidden;
-
-
   &__header {
     padding-top: 87px;
     background: url('../img/mobile/header-bg.png') no-repeat top center;
@@ -24,7 +22,7 @@
       padding-top: 159px;
       padding-bottom: 22px;
 
-      background: url('../../img/laptop/header-bg.png') no-repeat top center;
+      background: url('../img/laptop/header-bg.png') no-repeat top center;
       background-size: cover;
 
       .container {
@@ -33,7 +31,7 @@
       }
     }
     @media screen and (min-width: $desktop-width) {
-      background: url('../../img/desktop/header-bg.png') no-repeat top center;
+      background: url('../img/desktop/header-bg.png') no-repeat top center;
       background-size: cover;
       .container {
         position: relative;

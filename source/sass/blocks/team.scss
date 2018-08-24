@@ -1,0 +1,9 @@
+.team {
+  position: relative;
+  overflow-x: hidden;
+
+
+  @media screen and (min-width: $laptop-width) {
+    overflow: visible;
+  }
+}
