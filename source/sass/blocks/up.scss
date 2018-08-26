@@ -27,4 +27,17 @@
   &:focus {
     background-color: $red-hover;
   }
+
+
+  @media screen and (min-width: $tablet-width) {
+    right: 35px;
+  }
+
+  @media screen and (min-width: $laptop-width) {
+  right: 23px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    right: calc((100% - 1160px) / 2 + 8px );
+  }
 }

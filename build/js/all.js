@@ -4519,6 +4519,38 @@ Overlay.hide = function ()
 
 
 
+$(document).ready(function () {
+  var $winH = $(window).height();
+  var $scrollT = $(window).scrollTop();
+  var $up = $('.up');
+  var $header = $('.page-header');
+
+  if($scrollT > $winH) {
+    $up.fadeIn();
+    $header.addClass('_fixed');
+  } else if ($scrollT < $winH){
+    $up.fadeOut();
+    $header.removeClass('_fixed');
+  }
+
+  $(window).on('scroll', function () {
+    $scrollT = $(window).scrollTop();
+    if($scrollT > $winH) {
+      $up.fadeIn()
+      $header.addClass('_fixed');
+    } else if ($scrollT < $winH){
+      $up.fadeOut();
+      $header.removeClass('_fixed');
+    }
+  });
+
+  $up.on('click', function () {
+    $('body,html').animate({scrollTop:0},800);
+  });
+
+
+});
+
 $('.j-select').selectric({
   nativeOnMobile: false
 });
@@ -4547,15 +4579,17 @@ $('.j-select').selectric({
 
   $indexSlick.slick({
     mobileFirst: true,
-    infinite: true,
+    infinite: false,
+    slidesToShow: 1,
     appendArrows: $('.j-slider-controls'),
     prevArrow: '<button class="button slider__control slider__control--prev"><span class="visually-hidden">Предыдущее фото</span></button>',
     nextArrow: '<button class="button slider__control slider__control--next"><span class="visually-hidden">Следующее фото</span></button>',
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 767,
         settings: {
           slidesToShow: 2,
+          slidesToscroll: 1,
           centerMode: false,
           variableWidth: true,
           speed: 800,
@@ -4603,30 +4637,3 @@ $('.j-select').selectric({
   });
 })();
 
-
-$(document).ready(function () {
-  var $winH = $(window).height();
-  var $scrollT = $(window).scrollTop();
-  var $up = $('.up');
-
-  if($scrollT > $winH) {
-    $up.fadeIn()
-  } else if ($scrollT < $winH){
-    $up.fadeOut();
-  }
-
-  $(window).on('scroll', function () {
-    $scrollT = $(window).scrollTop();
-    if($scrollT > $winH) {
-      $up.fadeIn()
-    } else if ($scrollT < $winH){
-      $up.fadeOut();
-    }
-  });
-
-  $up.on('click', function () {
-    $('body,html').animate({scrollTop:0},800);
-  });
-
-
-});

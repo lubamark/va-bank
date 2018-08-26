@@ -22,15 +22,17 @@
 
   $indexSlick.slick({
     mobileFirst: true,
-    infinite: true,
+    infinite: false,
+    slidesToShow: 1,
     appendArrows: $('.j-slider-controls'),
     prevArrow: '<button class="button slider__control slider__control--prev"><span class="visually-hidden">Предыдущее фото</span></button>',
     nextArrow: '<button class="button slider__control slider__control--next"><span class="visually-hidden">Следующее фото</span></button>',
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 767,
         settings: {
           slidesToShow: 2,
+          slidesToscroll: 1,
           centerMode: false,
           variableWidth: true,
           speed: 800,
