@@ -3159,7 +3159,6 @@ h1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
         justify-content: space-around;
     margin-bottom: 10px;
     font-family: "Roboto", Arial, sans-serif;
@@ -3327,7 +3326,7 @@ h1 {
     position: relative;
     padding: 80px 40px 60px 40px;
     text-align: center;
-    background: #fff url("../../img/logo-bg.svg") no-repeat center 50px; }
+    background: #fff url("../img/logo-bg.svg") no-repeat center 50px; }
     .modal__block--text::after {
       content: '';
       position: absolute;
@@ -3528,7 +3527,7 @@ h1 {
     font-size: 12px;
     color: #201F1F;
     text-decoration: none;
-    background: url("../../img/icon/arrow-left-icon.svg") no-repeat left 21px; }
+    background: url("../img/icon/arrow-left-icon.svg") no-repeat left 21px; }
     @media screen and (min-width: 768px) {
       .inner-page__back {
         display: none; } }
