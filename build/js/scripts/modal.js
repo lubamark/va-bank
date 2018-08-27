@@ -48,28 +48,25 @@ Popup.prototype.init = function(){
         }
         }
     });
-
     $(document).on('close.popup', function(e){
         cmp.hide();
     });
-
     $(document).on('keydown', function(e) {
       if (e.target.keyCode = 27) {
         cmp.hide();
       }
     });
-
     cmp.closeLink.on("click", function(){
       cmp.hide();
         //return false;
     });
-
     cmp.popupContainer.on("click", function(e){
         var eTarget = $(e.target);
         if ( !eTarget.is('.j-modal') && eTarget.parents('.j-modal').length < 1)  {
             cmp.hide();
         }
     });
+
 };
 
 Popup.prototype.show = function (){
@@ -108,10 +105,7 @@ Popup.prototype.show = function (){
 
 Popup.prototype.hide = function (){
     var cmp = this;
-
-
     Overlay.hide();
-
     cmp.popup.animate({
         opacity: 0
     }, 300, function () {

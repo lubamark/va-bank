@@ -22,31 +22,33 @@
 
   $indexSlick.slick({
     mobileFirst: true,
-    arrows: true,
-    infinite: true,
+    infinite: false,
     slidesToShow: 1,
     appendArrows: $('.j-slider-controls'),
     prevArrow: '<button class="button slider__control slider__control--prev"><span class="visually-hidden">Предыдущее фото</span></button>',
     nextArrow: '<button class="button slider__control slider__control--next"><span class="visually-hidden">Следующее фото</span></button>',
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 767,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          variableWidth: false,
-          adaptiveHeight: false,
-          focusOnSelect: false,
-          dots: false
-
-
-
+          slidesToShow: 1,
+          slidesToscroll: 1,
+          centerMode: false,
+          variableWidth: true,
+          speed: 800,
+          lazyLoaded: true,
+          adaptiveHeight: false
         }
       },
       {
         breakpoint: 1440,
         settings: {
           slidesToShow: 3,
+          centerMode: false,
+          variableWidth: true,
+          speed: 800,
+          lazyLoaded: true,
+          adaptiveHeight: false
         }
       }
     ]

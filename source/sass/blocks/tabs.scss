@@ -4,8 +4,15 @@
   color: $white;
   margin-bottom: 35px;
 
+  &__scroll {
+    position: relative;
+    overflow-x: auto;
+  }
+
   &__wrapper {
     position: absolute;
+    overflow-y: hidden;
+    height: 102px;
     width: 100%;
     z-index: 10;
     &::after {
@@ -14,11 +21,12 @@
       top: 0;
       right: 0;
       height: 100%;
-      width: 80px;
+      width: 40px;
       background-image: linear-gradient(to right, transparent 0, rgba(0, 0, 0, 0.0) 8%, #242222 100%);
     }
 
     @media screen and (min-width: $laptop-width) {
+      height: auto;
       &::after {
         display: none;
       }
@@ -81,7 +89,6 @@
       padding-top: 73px;
       padding-left: 0;
     }
-
 
 
     &__link {

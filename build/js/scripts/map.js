@@ -26,7 +26,7 @@ if(document.getElementById('map') != null) {
       });
 
     var image = {
-      url: '../img/icon/pin-icon.svg',
+      url: 'img/icon/pin-icon.svg',
       size: new google.maps.Size(108, 108),
       origin: new google.maps.Point(0, 0),
       anchor: new google.maps.Point(54, 54)

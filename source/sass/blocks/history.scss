@@ -60,16 +60,19 @@
     }
 
     @media screen and (min-width: $tablet-width) {
+      max-width: 320px;
       font-size: 26px;
       line-height: 39px;
     }
     @media screen and (min-width: $laptop-width) {
+      max-width: 400px;
       margin-bottom: 30px;
       padding-top: 56px;
       font-size: 32px;
       line-height: 47px;
     }
     @media screen and (min-width: $desktop-width) {
+      max-width: 500px;
       font-size: 36px;
       line-height: 53px;
       padding-right: 40px;

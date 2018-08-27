@@ -31,7 +31,7 @@
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToscroll: 1,
           centerMode: false,
           variableWidth: true,
