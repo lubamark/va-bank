@@ -3,3 +3,8 @@
   padding: 0;
   list-style: none;
 }
+
+@mixin inline-block($align: middle) {
+  display: inline-block;
+  vertical-align: $align;
+}
