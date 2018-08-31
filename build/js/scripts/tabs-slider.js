@@ -7,6 +7,7 @@
     slidesToScroll: 1,
     variableWidth: false,
     adaptiveHeight: true,
+    fade: true,
     arrows: false,
     customPaging : function(slider, i) {
       var slide = $(slider.$slides[i]).find('.tabs-list__item');

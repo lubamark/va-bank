@@ -240,3 +240,17 @@ $selectric-font-size:       12px !default;                                      
     }
   }
 }
+
+/* Schedule page */
+.selectric-schedule-filter__select{
+  box-shadow: 0 2px 25px $shadow;
+  height: 50px;
+  min-height: 50px;
+  .selectric{
+    border: 0 !important;
+    height: 50px;
+    .label{
+      padding: 15px 15px;
+    }
+  }
+}

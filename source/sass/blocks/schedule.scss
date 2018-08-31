@@ -1,0 +1,424 @@
+.schedule-page{
+    margin: 12px 0 0;
+    @media screen and (min-width: $tablet-width) {
+        margin: -13px 0 0;
+    }
+    @media screen and (min-width: $laptop-width) {
+        margin: 19px 0 0;
+    }
+    @media screen and (min-width: $desktop-width) {
+        margin: 21px 0 0;
+    }
+    &__text{
+        display: block;
+        font: normal 400 16px/24px Roboto, sans-serif;
+        color: $black;
+        @media screen and (min-width: $tablet-width) {
+            font: normal 400 18px/32px Roboto, sans-serif;
+        }
+        @media screen and (min-width: $laptop-width) {
+            font: normal 400 20px/35px Roboto, sans-serif;
+        }
+        @media screen and (min-width: $desktop-width) {
+            
+        }
+    }
+}
+
+.schedule-filter{
+    margin: 30px 0 25px;
+    @media screen and (min-width: $tablet-width) {
+        margin: 34px 0 42px;
+    }
+    @media screen and (min-width: $laptop-width) {
+        margin: 47px 0 31px;
+    }
+    @media screen and (min-width: $desktop-width) {
+        margin: 45px 0 34px;
+    }
+    &__columns{
+        margin: 0 -9px;
+        font-size: 0;
+        line-height: 0;
+        @media screen and (min-width: $laptop-width) {
+            margin: 0 -28px;
+        }
+        @media screen and (min-width: $desktop-width) {
+            margin: 0 -10px;
+        }
+    }
+    &__column{
+        @include inline-block(top);
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 9px 26px;
+        @media screen and (min-width: $tablet-width) {
+            width: 50%;
+            padding: 0 9px 30px;
+        }
+        @media screen and (min-width: $laptop-width) {
+            padding: 0 28px 25px;
+        }
+        @media screen and (min-width: $desktop-width) {
+            width: 25%;
+            padding: 0 10px 26px;
+        }
+    }
+    &__label{
+        display: block;
+        font: normal 400 18px/23px Oswald, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: .03rem;
+        color: $black;
+        margin: 0 0 8px;
+        @media screen and (min-width: $tablet-width) {
+            margin: 0 0 7px;
+        }
+        @media screen and (min-width: $laptop-width) {
+            font: normal 400 20px/25px Oswald, sans-serif;
+        }
+        &--important{
+            &:after{
+                content: "*";
+                color: $red;
+            }
+        }
+    }
+    &__info{
+        display: block;
+        font: normal 400 14px/20px Roboto, sans-serif;
+        color: $black;
+        margin: -4px 0 0;
+        @media screen and (min-width: $tablet-width) {
+            font: normal 400 15px/21px Roboto, sans-serif;
+            margin: 5px 0 0;
+        }
+        @media screen and (min-width: $laptop-width) {
+            margin: 16px 0 0;
+        }
+        @media screen and (min-width: $desktop-width) {
+            margin: 5px 0 0;
+        }
+    }
+    &__important{
+        color: $red;
+    }
+}
+
+.schedule-table{
+    border-top: 1px solid $gray-border;
+    border-left: 1px solid $gray-border;
+    background: $white;
+    margin: 0 0 50px;
+    @media screen and (min-width: $laptop-width) {
+        margin: 0 0 75px;
+    }
+    @media screen and (min-width: $desktop-width) {
+        margin: 0 0 115px;
+    }
+    &-tabs{
+        display: flex;
+        @media screen and (min-width: $laptop-width) {
+            display: none;
+        }
+    }
+    &-tab{
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        border-right: 1px solid $gray-border;
+        border-bottom: 1px solid $gray-border;
+        @media screen and (min-width: $tablet-width) {
+            display: block !important;
+        }
+    }
+    &__tab{
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: $white;
+        text-align: center;
+        padding: 7px 5px 4px;
+        font: normal 400 16px/28px Oswald, sans-serif;
+        letter-spacing: .05rem;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        border: 0;
+        box-shadow: none;
+        &._active{
+            background: $red;
+            color: $white;
+        }
+        @media screen and (min-width: $tablet-width) {
+            font: normal 400 18px/32px Oswald, sans-serif;
+            padding: 14px 5px 9px;
+        }
+        @media screen and (min-width: $laptop-width) {
+
+        }
+        @media screen and (min-width: $desktop-width) {
+
+        }
+    }
+    &-head{
+        display: none;
+        @media screen and (min-width: $tablet-width) {
+            display: block;
+        }
+    }
+    &-row{
+        display: flex;
+    }
+    &-cell{
+        display: none;
+        width: 100%;
+        box-sizing: border-box;
+        border-bottom: 1px solid $gray-border;
+        border-right: 1px solid $gray-border;
+        &--time{
+            display: none;
+        }
+        &._empty{
+            display: none !important;
+        }
+        @media screen and (min-width: $tablet-width) {
+            
+        }
+        @media screen and (min-width: $laptop-width) {
+            display: block !important;
+            width: 100%;
+            &--time{
+                display: block !important;
+                width: 46%;
+            }
+            &._empty{
+                display: block !important;
+            }
+        }
+        @media screen and (min-width: $desktop-width) {
+            width: 156px;
+            &--time{
+                width: 73px;
+            }
+        }
+    }
+    &__th{
+        display: block;
+        font: normal 400 18px/32px Oswald, sans-serif;
+        color: $black;
+        text-transform: uppercase;
+        letter-spacing: .05rem;
+        padding: 18px 12px 13px;
+        @media screen and (min-width: $laptop-width) {
+            padding: 14px 10px 7px;
+        }
+        @media screen and (min-width: $desktop-width) {
+            padding: 18px 15px 13px;
+        }
+    }
+    &__full{
+        display: none;
+        @media screen and (min-width: $desktop-width) {
+            display: block;
+        }
+    }
+    &__short{
+        display: block;
+        @media screen and (min-width: $desktop-width) {
+            display: none;
+        }
+    }
+    &-time{
+        display: block;
+        font: normal 400 18px/32px Oswald, sans-serif;
+        color: $black;
+        text-transform: uppercase;
+        padding: 10px 10px 9px;
+        text-align: center;
+        @media screen and (min-width: $desktop-width) {
+            padding: 14px 10px 9px;
+        }
+    }
+    &__link{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+    }
+    &__day{
+        display: block;
+        border-bottom: 1px solid $gray-border;
+        box-sizing: border-box;
+        padding: 44px 11px 19px;
+        background: $white;
+        position: relative;
+        transition: background .15s ease;
+        &:last-child{
+            margin-bottom: -1px;
+        }
+        @media screen and (min-width: $tablet-width) {
+            padding: 15px 15px 21px;
+        }
+        @media screen and (min-width: $laptop-width) {
+            padding: 12px 10px 16px;
+        }
+        @media screen and (min-width: $desktop-width) {
+            padding: 15px;
+        }
+        &--sport1{
+            background: $sport1;
+            &:hover{
+                background: $sport1over;
+            }
+        }
+        &--sport2{
+            background: $sport2;
+            &:hover{
+                background: $sport2over;
+            }
+        }
+        &--sport3{
+            background: $sport3;
+            &:hover{
+                background: $sport3over;
+            }
+        }
+        &--sport4{
+            background: $sport4;
+            &:hover{
+                background: $sport4over;
+            }
+        }
+        &--sport5{
+            background: $sport5;
+            &:hover{
+                background: $sport5over;
+            }
+        }
+        &--sport6{
+            background: $sport6;
+            &:hover{
+                background: $sport6over;
+            }
+        }
+    }
+    &__sport{
+        display: block;
+        font: normal 500 18px/25px Roboto, sans-serif;
+        color: $black;
+        @media screen and (min-width: $tablet-width) {
+            margin: 0 121px 0 121px;
+        }
+        @media screen and (min-width: $laptop-width) {
+            margin: 0;
+            font: normal 500 14px/20px Roboto, sans-serif;
+        }
+        @media screen and (min-width: $desktop-width) {
+            font: normal 500 15px/21px Roboto, sans-serif;
+        }
+    }
+    &__time{
+        display: block;
+        font: normal 400 15px/21px Roboto, sans-serif;
+        color: $black;
+        position: absolute;
+        top: 17px;
+        left: 11px;
+        @media screen and (min-width: $tablet-width) {
+            top: 21px;
+            left: 16px;
+        }
+        @media screen and (min-width: $laptop-width) {
+            font: normal 400 12px/17px Roboto, sans-serif;
+            margin: 5px 0 0;
+            position: static;
+        }
+        @media screen and (min-width: $desktop-width) {
+            font: normal 400 13px/18px Roboto, sans-serif;
+            margin: 6px 0 0;
+        }
+    }
+    &__place{
+        display: block;
+        font: normal 400 15px/21px Roboto, sans-serif;
+        color: $black;
+        margin: 5px 0 0;
+        @media screen and (min-width: $tablet-width) {
+            margin: 6px 121px 0 121px;
+        }
+        @media screen and (min-width: $laptop-width) {
+            font: normal 400 12px/17px Roboto, sans-serif;
+            margin: 2px 0 0;
+        }
+        @media screen and (min-width: $desktop-width) {
+            font: normal 400 13px/20px Roboto, sans-serif;
+            margin: 5px 0 0;
+        }
+    }
+    &__group{
+        display: block;
+        font: normal 500 15px/21px Roboto, sans-serif;
+        color: $black;
+        position: absolute;
+        top: 15px;
+        right: 11px;
+        @media screen and (min-width: $tablet-width) {
+            top: 21px;
+            right: 19px;
+        }
+        @media screen and (min-width: $laptop-width) {
+            font: normal 500 12px/18px Roboto, sans-serif;
+            margin: 20px 0 0;
+            position: static;
+        }
+        @media screen and (min-width: $desktop-width) {
+            font: normal 500 13px/20px Roboto, sans-serif;
+            margin: 15px 0 0;
+        }
+    }
+    &__clock{
+        display: block;
+        width: 18px;
+        height: 18px;
+        background: $clock-icon 50% 50%;
+        background-size: contain;
+        margin: 18px auto 17px;
+        @media screen and (min-width: $desktop-width) {
+            margin: 22px auto 23px;
+        }
+    }
+    &-empty{
+        display: none;
+        height: 90px;
+        box-sizing: border-box;
+        border-right: 1px solid $gray-border;
+        border-bottom: 1px solid $gray-border;
+        text-align: center;
+        &:before{
+            content: "";
+            @include inline-block();
+            height: 100%;
+            width: 0;
+        }
+    }
+    &__empty{
+        @include inline-block();
+        color: $gray7;
+        font: normal 400 18px/25px Roboto, sans-serif;
+    }
+}
+
+@media screen and (min-width: $tablet-width) {
+
+}
+
+@media screen and (min-width: $laptop-width) {
+
+}
+
+@media screen and (min-width: $desktop-width) {
+    
+}

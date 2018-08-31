@@ -4,17 +4,21 @@
   // клонируем слайды
   var $sliderFor = $('.j-modal-slider-for');
   var $sliderNav = $('.j-modal-slider-nav');
-  $slideImages = $('.news-slider__item').find('img');
+  $slideImages = $pageSlick.find('img');
+  $slideHrefs = $pageSlick.find('a');
 
-  $slideImages.each(function () {
-    var $img = $(this).clone();
-    $img.appendTo($sliderFor).wrap('<div class="modal-slider-for__item"></div>');
+  $slideHrefs.each(function () {
+    var img = '<img src="' + $(this).attr('href') + '" alt="" width="489" height="332">';
+    var slide = '<div class="modal-slider-for__item">' + img + '</div>';
+    $sliderFor.append(slide);
+
   });
   $slideImages.each(function () {
     var $img = $(this).clone();
     $img.appendTo($sliderNav).wrap('<div class="modal-slider-nav__item"></div>');
   });
 
+  //слайдер страницы
   $pageSlick.on('init reInit afterChange', function (event, slick) {
     if (slick.slideCount < 10 ) {
       $pageSliderSum.text('0' + slick.slideCount);
@@ -52,13 +56,7 @@
     ]
   });
 
-
-  var indexSlide;
-  //забираем номер слайда из ссылки
-  $('.j-slider-link').on('click', function () {
-    indexSlide = $(this).attr('href') - 1;
-    console.log(indexSlide);
-  });
+  //модальные слайдеры
 
   var $modalSliderI = $('.j-modal-slider-current');
   var $modalSliderSum = $('.j-modal-slider-quantity');
@@ -82,7 +80,7 @@
   });
 
   $sliderFor.slick({
-    initialSlide: indexSlide,
+    slickGoTo: 4,
     mobileFirst: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -91,7 +89,7 @@
     asNavFor: $sliderNav
   });
   $sliderNav.slick({
-    initialSlide: indexSlide,
+    slickGoTo: 4,
     mobileFirst: true,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -102,6 +100,15 @@
     appendArrows: $('.j-modal-slider-controls'),
     prevArrow: '<button class="button modal-slider__control modal-slider__control--prev"><span class="visually-hidden">Предыдущее фото</span></button>',
     nextArrow: '<button class="button modal-slider__control modal-slider__control--next"><span class="visually-hidden">Следующее фото</span></button>',
+  });
+
+
+  //переход по ссылке
+
+  $('.j-slider-link').on('click', function () {
+    var slideIndex = $(this).attr('data-index');
+    $sliderNav.slick('slickGoTo', slideIndex - 1);
+    $sliderFor.slick('slickGoTo', slideIndex - 1);
   });
 
 })();
