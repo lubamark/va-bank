@@ -66,7 +66,7 @@ Popup.prototype.init = function(){
 
     cmp.popupContainer.on("click", function(e){
         var eTarget = $(e.target);
-        if ( !eTarget.is('.j-modal') && eTarget.parents('.j-modal').length < 1)  {
+        if (eTarget.is('.j-modal') && eTarget.parents('.j-modal').length < 1)  {
             cmp.hide();
         }
     });

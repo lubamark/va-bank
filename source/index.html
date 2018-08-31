@@ -279,7 +279,7 @@
       </div>
       <ul class="teachers__list">
         <li class="teachers__item">
-          <a href="" rel="trainers-modal" class="teachers__link">
+          <a href="" rel="trainers-modal" class="teachers__link j-modal-link j-ajax-popup">
             <div class="teachers__img">
               <img src="img/teacher1.png" alt="" width="251" height="228">
             </div>
@@ -288,7 +288,7 @@
           </a>
         </li>
         <li class="teachers__item">
-          <a href="" class="teachers__link">
+          <a rel="trainers-modal" href="" class="teachers__link j-modal-link j-ajax-popup">
             <div class="teachers__img">
               <img src="img/teacher2.png" alt="" width="257" height="274">
             </div>
@@ -298,7 +298,7 @@
           </a>
         </li>
         <li class="teachers__item">
-        <a href="" class="teachers__link">
+        <a rel="trainers-modal" href="" class="teachers__link j-modal-link j-ajax-popup">
           <div class="teachers__img">
             <img src="img/teacher1.png" alt="" width="251" height="228">
           </div>
@@ -307,7 +307,7 @@
         </a>
       </li>
         <li class="teachers__item teachers__item--mobile-none">
-          <a href="" class="teachers__link">
+          <a rel="trainers-modal" href="" class="teachers__link j-modal-link j-ajax-popup">
             <div class="teachers__img">
               <img src="img/teacher2.png" alt="" width="257" height="274">
             </div>
@@ -526,7 +526,7 @@
 <!--Modal -->
 <div class="modal j-modal" id="appointment-modal">
   <div class="modal__block modal__block--narrow j-modal-block">
-    <div class="j-modal-inner appointment-modal">
+    <div class="appointment-modal">
       <form action="#" class="appointment__form form" method="post">
         <p class="appointment__title"> Запишись на первое
           <strong>Бесплатное занятие</strong>
@@ -561,7 +561,7 @@
 </div>
 <div class="modal j-modal" id="partners-modal">
   <div class="modal__block j-modal-block">
-    <div id="partner-info" class="j-modal-inner partner-info">
+    <div id="partner-info" class="partner-info">
       <div class="contianer">
         <h2 class="partner-info__title">Информация для&nbsp;партнеров</h2>
         <p>
@@ -629,7 +629,7 @@
 </div>
 <div class="modal j-modal" id="trainers-modal">
   <div class="modal__block modal__block--teachers j-modal-block">
-    <div  class="teachers__modal" id="trainer-1">
+    <div  class="teachers__modal j-modal-inner" id="trainer-1">
       <div class="teachers__info">
         <div class="teachers__img">
           <img src="img/teacher1.png" alt="" width="251" height="228">
@@ -651,12 +651,15 @@
   </div>
 </div>
 <!-- Модалка с текстом для вывода сообщения о принятии заявки -->
-<div class="modal j-modal" id="success-modal">
-  <div class="modal__block modal__block--text j-modal-block">
-    <h1>Заявка отправлена</h1>
-    <p class="modal__caption">Мы свяжемся с вами в&nbsp;ближайшее время</p>
-    <button class="modal__close j-modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
-  </div>
+<div class="modal j-modal j-message" id="message">
+    <div class="modal__block modal__block--text j-modal-block">
+      <div>
+        <h1 class="j-modal-title">Заявка отправлена</h1>
+        <p class="j-modal-caption modal__caption">Мы свяжемся с вами в&nbsp;ближайшее время</p>
+      </div>
+      <button class="modal__close j-modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+    </div>
+
 </div>
 <script src="js/all.js"></script>
 </body>
