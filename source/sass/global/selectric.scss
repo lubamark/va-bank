@@ -252,5 +252,12 @@ $selectric-font-size:       12px !default;                                      
     .label{
       padding: 15px 15px;
     }
+    &-items{
+      border: 0 !important;
+      box-shadow: 0 2px 25px $shadow !important;
+    }
+  }
+  &.selectric-open{
+    box-shadow: none !important;
   }
 }

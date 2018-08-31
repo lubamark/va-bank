@@ -519,6 +519,13 @@ h1 {
     height: 50px; }
     .selectric-schedule-filter__select .selectric .label {
       padding: 15px 15px; }
+    .selectric-schedule-filter__select .selectric-items {
+      border: 0 !important;
+      -webkit-box-shadow: 0 2px 25px rgba(0, 0, 0, 0.1) !important;
+              box-shadow: 0 2px 25px rgba(0, 0, 0, 0.1) !important; }
+  .selectric-schedule-filter__select.selectric-open {
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important; }
 
 .page-header {
   position: absolute;
