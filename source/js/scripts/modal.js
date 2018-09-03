@@ -70,6 +70,22 @@ Popup.prototype.init = function(){
             cmp.hide();
         }
     });
+
+    $(document).on('custom.message', function (e, title, caption) {
+      var eTitle = e.title;
+      var eCaption = e.caption;
+
+      $('.j-modal-title').text(eTitle);
+      $('.j-modal-caption').text(eCaption);
+      $.event.trigger({type: 'show.popup', targetId: 'message'});
+    });
+
+  $(document).on('success.message', function (e) {
+    $('.j-modal-title').text('Заявка отправлена');
+    $('.j-modal-caption').text('Мы свяжемся с вами в ближайшее время');
+    $.event.trigger({type: 'show.popup', targetId: 'message'});
+  });
+
 };
 
 Popup.prototype.show = function (){

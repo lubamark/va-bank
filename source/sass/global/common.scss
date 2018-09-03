@@ -47,6 +47,10 @@ body {
   }
 }
 
+main {
+  min-height: calc(100vh - 210px);
+}
+
 *, *::before, *::after {
   box-sizing: inherit;
 }
@@ -84,7 +88,7 @@ h1 {
   font-weight: 500;
   line-height: 53px;
   font-size: 36px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.02rem;
   text-transform: uppercase;
 
   @media screen and (min-width: $tablet-width) {

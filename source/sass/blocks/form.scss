@@ -33,7 +33,6 @@
       &::after {
         position: absolute;
       }
-
       &::before {
         content: '';
         top: 2px;
@@ -44,7 +43,6 @@
         border: 1px solid #E0DEDE;
         background-color: $white;
       }
-
       &::after {
         content: none;
         top: 5px;
@@ -57,7 +55,9 @@
         transform-origin: center;
         transform: rotate(45deg);
       }
-
+      &._error {
+        color: #FF5A5A;
+      }
     }
 
     @media screen and (min-width: $laptop-width) {
@@ -158,6 +158,15 @@
   height: 46px;
   background: $white;
   border: 1px solid $gray-border !important;
+  &._error {
+    border: 1px solid #FDA4A4 !important;
+    .label {
+      color: #FF5A5A;
+    }
+    .button::after {
+      border-color: #FF5A5A;
+    }
+  }
 
   &-open {
     .selectric  {
