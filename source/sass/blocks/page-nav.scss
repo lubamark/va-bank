@@ -97,12 +97,13 @@
 
       &~.page-nav__menu {
         display: block;
-        position: fixed;
+        position: absolute;
         top: 0;
-        left: 0;
+        left: -4px;
         z-index: 10;
 
-        min-height: 100vh;
+        height: 100vh;
+        min-height: 350px;
         padding-top: 20px;
         padding-left: 20px;
         background-color: $white;
