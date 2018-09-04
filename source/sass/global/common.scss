@@ -19,6 +19,7 @@ body {
 
   &._menu {
     height: 100vh;
+    min-height: 350px;
     right: 17px;
     overflow: hidden;
     &::before {
