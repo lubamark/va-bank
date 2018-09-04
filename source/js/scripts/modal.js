@@ -84,7 +84,7 @@ Popup.prototype.init = function(){
       $.event.trigger({type: 'show.popup', targetId: 'message'});
     });
 
-  $(document).on('success.message', function (e) {
+    $(document).on('success.message', function (e) {
     $('.j-modal-title').text('Заявка отправлена');
     $('.j-modal-caption').text('Мы свяжемся с вами в ближайшее время');
     $.event.trigger({type: 'show.popup', targetId: 'message'});
@@ -119,22 +119,23 @@ Popup.prototype.show = function (){
 
         cmp.popup.animate({
             opacity: 1
-        }, 300, function () {
+        }, 150, function () {
             cmp.popupContainer.removeClass('_loading');
             $.event.trigger({type: 'popup.shown'});
         });
-    }, 1000);
+    }, 200);
 };
 
 Popup.prototype.hide = function (){
     var cmp = this;
 
 
+
     Overlay.hide();
 
     cmp.popup.animate({
         opacity: 0
-    }, 300, function () {
+    }, 150, function () {
         cmp.popupContainer.removeAttr('style');
         cmp.body.removeAttr('style');
         if($('html').hasClass('touchevents')){
@@ -148,6 +149,7 @@ Popup.prototype.hide = function (){
         cmp.paddedElem.removeAttr('style');
         cmp.fixedElem.removeAttr('style');
         cmp.content.html('');
+        cmp.popup.find('.form')[0].reset();
         $.event.trigger({type: 'popup.closed'});
     });
 };
@@ -188,7 +190,7 @@ Overlay.show = function ()
     var overlay = $ ('.j-overlay');
     overlay.animate({
         opacity: 1
-    }, 300);
+    }, 150);
 };
 
 Overlay.hide = function ()
@@ -197,7 +199,7 @@ Overlay.hide = function ()
     if (overlay.length > 0) {
         overlay.animate({
             opacity: 0
-        }, 300, function () {
+        }, 150, function () {
             overlay.remove ();
         });
     }
