@@ -14,11 +14,31 @@
     position: fixed;
     top: -1px;
     left: 0;
+
     width: 100%;
-    z-index: 10;
+    min-height: 83px;
+    z-index: 20;
     background-color: $white;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
     animation: roll 0.8s ease;
+
+    @media screen and (min-width: $tablet-width) {
+      .page-nav {
+        padding: 10px 0;
+
+        &__logo {
+          margin-right: 12px;
+
+          img {
+            width: 53px;
+            height: 51px;
+          }
+        }
+      }
+      .main-menu__link::after {
+        bottom: -15px;
+      }
+    }
   }
 }
 
