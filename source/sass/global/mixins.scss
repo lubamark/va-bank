@@ -8,3 +8,11 @@
   display: inline-block;
   vertical-align: $align;
 }
+
+@mixin middle($align: middle) {
+  content: "";
+  display: inline-block;
+  vertical-align: $align;
+  width: 0;
+  height: 100%;
+}

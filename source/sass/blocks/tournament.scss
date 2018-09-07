@@ -250,15 +250,15 @@
 }
 
 .tournament-filter{
-    margin: 26px 0 25px;
+    margin: 26px 0 0;
     @media screen and (min-width: $tablet-width) {
-        margin: 34px 0 42px;
+        margin: 34px 0 0;
     }
     @media screen and (min-width: $laptop-width) {
-        margin: 39px 0 31px;
+        margin: 39px 0 54px;
     }
     @media screen and (min-width: $desktop-width) {
-        margin: 56px 0 34px;
+        margin: 56px 0 70px;
     }
     &-title{
         display: block;
@@ -327,9 +327,12 @@
         width: 100%;
         box-sizing: border-box;
         padding: 0 7px 26px;
+        &:last-child{
+            padding-bottom: 0; 
+        }
         @media screen and (min-width: $tablet-width) {
             width: 33.33333%;
-            padding: 0 7px 30px;
+            padding: 0 7px 0;
         }
     }
     &__label{

@@ -1,0 +1,166 @@
+.tournament-partners{
+    box-sizing: border-box;
+    position: relative;
+    padding: 45px 0 58px;
+    &:last-child{
+        margin: 0 0 -51px;
+    }
+    @media screen and (min-width: $tablet-width) {
+        padding: 58px 0 59px;
+        &:last-child{
+            margin: 0 0 -40px;
+        }
+    }
+    @media screen and (min-width: $laptop-width) {
+        padding: 66px 0 0;
+        font-size: 0;
+        line-height: 0;
+        &:last-child{
+            margin: 0 0 -40px;
+        }
+    }
+    @media screen and (min-width: $desktop-width) {
+        padding: 68px 0 0;
+        &:last-child{
+            margin: 0 0 -47px;
+        }
+    }
+    &-left{
+        @include inline-block(top);
+        width: 100%;
+        box-sizing: border-box;
+        @media screen and (min-width: $laptop-width) {
+            width: calc(100% - 574px);
+        }
+        @media screen and (min-width: $desktop-width) {
+            width: calc(100% - 744px);
+            padding: 20px 0 0;
+        }
+    }
+    &-right{
+        @include inline-block(top);
+        width: 100%;
+        box-sizing: border-box;
+        margin: 23px 0 0;
+        @media screen and (min-width: $tablet-width) {
+            margin: 20px 0 0;
+        }
+        @media screen and (min-width: $laptop-width) {
+            margin: 0;
+            width: 574px;
+        }
+        @media screen and (min-width: $desktop-width) {
+            width: 744px;
+        }
+    }
+    &__title{
+        display: block;
+        font: normal 500 36px/42px Oswald, sans-serif;
+        color: $true-black;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        @media screen and (min-width: $tablet-width) {
+            font: normal 500 44px/50px Oswald, sans-serif;
+        }
+        @media screen and (min-width: $laptop-width) {
+            font: normal 500 50px/50px Oswald, sans-serif;
+        }
+    }
+    &__text{
+        display: block;
+        font: normal 400 14px/20px Roboto, sans-serif;
+        color: $true-black;
+        margin: 14px 0 0;
+        @media screen and (min-width: $tablet-width) {
+            font: normal 400 15px/21px Roboto, sans-serif;
+            margin: 7px 0 0;
+        }
+        @media screen and (min-width: $laptop-width) {
+            margin: 16px 0 0;
+        }
+    }
+    &__button{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 8px 34px 5px 22px;
+        letter-spacing: 0.11em;
+        &:before{
+            right: 15px;
+        }
+        @media screen and (min-width: $tablet-width) {
+            padding: 10px 57px 7px 49px;
+            &:before{
+                top: 16px;
+                right: 17px;
+            }
+        }
+        @media screen and (min-width: $laptop-width) {
+            position: relative;
+            margin: 28px 0 0;
+            height: 40px;
+            padding: 21px 57px 7px 49px;
+        }
+    }
+    &__list{
+        margin: 0 -5px;
+        font-size: 0;
+        line-height: 0;
+        @media screen and (min-width: $tablet-width) {
+            margin: 0 -7px;
+        }
+        @media screen and (min-width: $laptop-width) {
+            position: relative;
+            top: -2px;
+        }
+        @media screen and (min-width: $desktop-width) {
+            margin: 0 -10px;
+            top: 0;
+        }
+    }
+    &__item{
+        @include inline-block(top);
+        width: 135px;
+        height: 82px;
+        margin: 0 5px 10px;
+        box-sizing: border-box;
+        background: $white;
+        border: 1px solid $gray-border;
+        @media screen and (min-width: $tablet-width) {
+            width: 133px;
+            height: 84px;
+            margin: 0 7px 13px;
+        }
+        @media screen and (min-width: $laptop-width) {
+            
+        }
+        @media screen and (min-width: $desktop-width) {
+            width: 171px;
+            height: 108px;
+            margin: 0 10px 17px;
+        }
+    }
+    &__link{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+        /* Firefox 3.5+ */
+        -webkit-filter: grayscale(100%);
+        /* Chrome 19+ & Safari 6+ */
+        filter: grayscale(100%);
+    }
+    &__link:hover &__img{
+        filter: none;
+    }
+}
