@@ -18,6 +18,33 @@ Schedule = function(container){
 Schedule.prototype.init = function(){
     var cmp = this;
 
+    cmp.tab.on('click', function(e){
+        e.preventDefault();
+        var $this = $(this);
+        if(!$this.hasClass('_active')){
+            cmp.tab.removeClass('_active');
+            $this.addClass('_active');
+            cmp.cell.hide();
+            cmp.cell.filter('[data-day="'+$this.data('day')+'"]').fadeIn(300);
+            if(cmp.cell.filter('[data-day="'+$this.data('day')+'"]').filter(':not(._empty)').length < 1){
+                cmp.empty.fadeIn(300);
+            }
+            else{
+                cmp.empty.hide();
+            }
+        }
+    });
+
+    cmp.tab.each(function(){
+        var $this = $(this);
+        if(cmp.cell.filter('[data-day="'+$this.data('day')+'"]').filter(':not(._empty)').length < 1){
+            $this.parent().hide();
+        }
+        else{
+            $this.parent().show();
+        }
+    });
+
     if(cmp.tab.filter('._active').length > 0){
         cmp.tab.each(function(){
             var $this = $(this);
@@ -48,32 +75,17 @@ Schedule.prototype.init = function(){
         }
     }
 
-    cmp.tab.each(function(){
-        var $this = $(this);
-        if(cmp.cell.filter('[data-day="'+$this.data('day')+'"]').filter(':not(._empty)').length < 1){
-            $this.parent().hide();
-        }
-        else{
-            $this.parent().show();
-        }
-    });
-
-    cmp.tab.on('click', function(e){
-        e.preventDefault();
-        var $this = $(this);
-        if(!$this.hasClass('_active')){
-            cmp.tab.removeClass('_active');
-            $this.addClass('_active');
-            cmp.cell.hide();
-            cmp.cell.filter('[data-day="'+$this.data('day')+'"]').fadeIn(300);
-            if(cmp.cell.filter('[data-day="'+$this.data('day')+'"]').filter(':not(._empty)').length < 1){
-                cmp.empty.fadeIn(300);
-            }
-            else{
-                cmp.empty.hide();
+    if(cmp.tab.filter('._active').is(':visible')){
+        console.log('vis');
+    }
+    else{
+        for(var i=0; i<cmp.tab.length; i++){
+            if($(cmp.tab[i]).is(':visible')){
+                $(cmp.tab[i]).click();
+                break;
             }
         }
-    });
+    }
 
     $(window).on('resize', function(){
         cmp.tab.each(function(){
