@@ -4,8 +4,8 @@
   // клонируем слайды
   var $sliderFor = $('.j-modal-slider-for');
   var $sliderNav = $('.j-modal-slider-nav');
-  $slideImages = $pageSlick.find('img');
-  $slideHrefs = $pageSlick.find('a');
+  var $slideImages = $pageSlick.find('img');
+  var $slideHrefs = $pageSlick.find('a');
 
   $slideHrefs.each(function () {
     var img = '<img src="' + $(this).attr('href') + '" alt="" width="489" height="332">';

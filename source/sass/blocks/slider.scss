@@ -210,32 +210,32 @@
       }
     }
     @media screen and (min-width: $laptop-width) {
-      &-slider {
-        height: 270px !important;
-      }
-      &-slide {
-        opacity: 0.4;
-        margin-top: 5px;
+    &-slider {
+      height: 270px !important;
+    }
+    &-slide {
+      opacity: 0.4;
+      margin-top: 5px;
+      width: 155px !important;
+      li {
         width: 155px !important;
-        li {
-          width: 155px !important;
-          margin-top: 80px !important;
-          margin-bottom: 0;
-        }
-      }
-      &-current {
-        width: 390px !important;
-        opacity: 1;
-        + .slick-slide {
-          opacity: 1;
-        }
-        li {
-          width: 390px !important;
-          margin-top: 0px !important;
-          filter: none;
-        }
+        margin-top: 80px !important;
+        margin-bottom: 0;
       }
     }
+    &-current {
+      width: 390px !important;
+      opacity: 1;
+      + .slick-slide {
+        opacity: 1;
+      }
+      li {
+        width: 390px !important;
+        margin-top: 0px !important;
+        filter: none;
+      }
+    }
+  }
     @media screen and (min-width: $desktop-width) {
 
       &-slider {
