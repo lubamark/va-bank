@@ -20,20 +20,16 @@ $(document).ready(function () {
   });
   menuLink.on('click', function () {
     closeMenu();
-  })
+  });
 
-
-
-
-   var menuClick =  function(win) {
-    if (win < 1024) {
-
-    }
-  };
 
   $(window).resize(function () {
     windowWidth = $(window).width();
-    menuClick(windowWidth);
+
+    if(windowWidth > 1024) {
+      console.log(1024);
+      closeMenu();
+    }
   });
 });
 

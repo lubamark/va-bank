@@ -111,6 +111,9 @@
         @media screen and (min-width: $tablet-width) {
           display: flex;
           min-height: 100px;
+          height: 100px;
+          width: 100%;
+          left: -35px;
           padding-top: 30px;
           padding-left: 22px;
         }

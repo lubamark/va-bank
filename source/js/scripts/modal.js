@@ -149,7 +149,9 @@ Popup.prototype.hide = function (){
         cmp.paddedElem.removeAttr('style');
         cmp.fixedElem.removeAttr('style');
         cmp.content.html('');
-        cmp.popup.find('.form')[0].reset();
+        if (cmp.popup.find('.form')[0]) {
+          cmp.popup.find('.form')[0].reset();
+        }
         $.event.trigger({type: 'popup.closed'});
     });
 };

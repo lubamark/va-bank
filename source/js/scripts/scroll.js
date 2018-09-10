@@ -16,7 +16,7 @@ $(document).ready(function () {
     $scrollT = $(window).scrollTop();
     if($scrollT > $winH) {
       $up.fadeIn()
-      $header.addClass('_fixed');git 
+      $header.addClass('_fixed');
     } else if ($scrollT < $winH){
       $up.fadeOut();
       $header.removeClass('_fixed');
