@@ -12,8 +12,7 @@ $(document).ready(function () {
     menuHandler.toggleClass('_opened');
     $('body').toggleClass('_menu');
   };
-
-  closeMenu();
+ // closeMenu();
 
   menuHandler.on('click', function () {
     toggleMenu();
@@ -27,7 +26,6 @@ $(document).ready(function () {
     windowWidth = $(window).width();
 
     if(windowWidth > 1024) {
-      console.log(1024);
       closeMenu();
     }
   });

@@ -101,7 +101,7 @@ Popup.prototype.show = function (){
         cmp.body.css({overflow: "hidden", paddingRight: getScrollBarWidth(), position: "fixed", left: 0, top: -cmp.scrollTopVal + 'px', right: 0, bottom: 0});
     }
     else{
-        cmp.body.css({overflow: "hidden", paddingRight: getScrollBarWidth()});
+        cmp.body.css({overflow: "hidden", height: "100vh",  paddingRight: getScrollBarWidth()});
     }
 
     cmp.paddedElem.css({right: this.scrollBarWidth});
