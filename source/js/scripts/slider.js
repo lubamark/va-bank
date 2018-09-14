@@ -2,6 +2,11 @@
   var $indexSliderI = $('.j-current-photo');
   var $indexSliderSum = $('.j-all-photos');
   var $indexSlick = $('.j-slider');
+  var $indexSlidesCount = $indexSlick.find('>li').length;
+
+  $indexSlick.on('init reInit', function (event, slick, currentSlide, nextSlide) {
+    $indexSlick.find('[data-slick-index="'+0+'"]').addClass('_active');
+  });
 
   $indexSlick.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
     var i = (currentSlide ? currentSlide : 0) + 1;
@@ -17,6 +22,37 @@
     } else {
       $indexSliderSum.text(slick.slideCount);
     }
+  });
+
+  $indexSlick.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    if(currentSlide === nextSlide){
+      $indexSlick.find('[data-slick-index="'+nextSlide+'"]').addClass('_active');
+    }
+    else{
+      if(currentSlide === 0 && nextSlide === ($indexSlidesCount-1)){
+        $indexSlick.find('[data-slick-index="'+nextSlide+'"]').addClass('_active');
+        $indexSlick.find('[data-slick-index="-1"]').addClass('_active');
+        $indexSlick.find('[data-slick-index="'+currentSlide+'"]').removeClass('_active');
+      }
+      else
+      if(currentSlide === ($indexSlidesCount-1) && nextSlide === 0){
+        $indexSlick.find('[data-slick-index="'+nextSlide+'"]').addClass('_active');
+        $indexSlick.find('[data-slick-index="'+$indexSlidesCount+'"]').addClass('_active');
+      }
+      else
+      if(nextSlide > currentSlide){
+        $indexSlick.find('[data-slick-index="'+nextSlide+'"]').addClass('_active');
+      }
+      else{
+        $indexSlick.find('[data-slick-index="'+nextSlide+'"]').addClass('_active');
+        $indexSlick.find('[data-slick-index="'+currentSlide+'"]').removeClass('_active');
+      }
+    }
+  });
+  $indexSlick.on('afterChange', function (event, slick, currentSlide, nextSlide) {
+    $indexSlick.find('[data-slick-index="'+(currentSlide+1)+'"]').removeClass('_active');
+    $indexSlick.find('[data-slick-index="'+(currentSlide+2)+'"]').removeClass('_active');
+    $indexSlick.find('[data-slick-index="'+(currentSlide+3)+'"]').removeClass('_active');
   });
 
 
@@ -37,17 +73,19 @@
           variableWidth: true,
           speed: 800,
           lazyLoaded: true,
+          infinite: false,
           adaptiveHeight: false
         }
       },
       {
-        breakpoint: 1440,
+        breakpoint: 1439,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 1,
           centerMode: false,
           variableWidth: true,
           speed: 800,
           lazyLoaded: true,
+          infinite: false,
           adaptiveHeight: false
         }
       }
