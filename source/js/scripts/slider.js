@@ -71,7 +71,7 @@
           slidesToscroll: 1,
           centerMode: false,
           variableWidth: true,
-          speed: 800,
+          speed: 600,
           lazyLoaded: true,
           infinite: false,
           adaptiveHeight: false
@@ -83,7 +83,7 @@
           slidesToShow: 1,
           centerMode: false,
           variableWidth: true,
-          speed: 800,
+          speed: 600,
           lazyLoaded: true,
           infinite: false,
           adaptiveHeight: false

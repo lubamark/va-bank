@@ -88,6 +88,9 @@
     a {
       display: block;
       text-decoration: none;
+      .teachers__name {
+        transition: all 0.3s ease;
+      }
       &:hover,
       &:focus {
         .teachers__name {

@@ -68,7 +68,7 @@
   &__container {
     @media screen and (min-width: $laptop-width) {
       position: relative;
-      padding: 0 23px;
+      padding: 0;
       display: flex;
       justify-content: space-between;
       max-width: 1160px;
