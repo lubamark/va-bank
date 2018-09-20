@@ -38,6 +38,9 @@
       max-width: 100%;
       margin-bottom: 10px;
     }
+    .button--wide {
+      width: calc(50% - 25px/2);
+    }
   }
 
   @media screen and (min-width: $laptop-width) {

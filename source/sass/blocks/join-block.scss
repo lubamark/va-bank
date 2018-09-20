@@ -9,6 +9,7 @@
   @media screen and (min-width: $tablet-width) {
     position: relative;
     width: 303px;
+    min-height: 358px;
     padding-top: 32px;
     padding-bottom: 38px;
     background-size: cover;
@@ -41,6 +42,7 @@
     width: 374px;
 
     background: url('../img/laptop/join-bg.jpg') no-repeat top left;
+    background-size: cover;
 
     &::after {
 
@@ -49,6 +51,7 @@
       width: 344px;
       height: 418px;
       background: url('../img/laptop/join-kid.png') no-repeat top left;
+      background-size: cover;
     }
 
     .container {
@@ -83,7 +86,12 @@
     @include list-reset;
     margin-bottom: 23px;
 
+    @media screen and (min-width: $tablet-width) {
+      min-height: 157px;
+    }
+
     @media screen and (min-width: $laptop-width) {
+      min-height: 216px;
       margin-bottom: 35px;
     }
   }
@@ -136,7 +144,7 @@
         padding-right: 85px;
       }
       &:nth-child(2) {
-        padding-right: 140px;
+        padding-right: 130px;
       }
       &:last-child {
         padding-right: 60px;
@@ -153,7 +161,7 @@
         padding-right: 120px;
       }
       &:nth-child(2) {
-        padding-right: 177px;
+        padding-right: 170px;
       }
       &:last-child {
         padding-right: 90px;

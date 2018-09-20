@@ -2,11 +2,20 @@
   padding: 37px 0 66px 0;
   background-color: $white;
 
+  &-modal {
+    width: 280px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   &__laptop-visible {
     display: none;
   }
 
   @media screen and (min-width: $tablet-width) {
+    &-modal {
+      width: auto;
+    }
     padding-top: 35px;
     padding-bottom: 56px;
     width: 340px;
@@ -56,11 +65,11 @@
     @media screen and (min-width: $tablet-width) {
       font-size: 23px;
       line-height: 41px;
-      letter-spacing: 0.065em;
+      letter-spacing: 0.05em;
 
       strong {
         font-size: 26px;
-        letter-spacing: -0.01em;
+        letter-spacing: -0.015em;
       }
     }
 

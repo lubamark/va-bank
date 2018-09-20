@@ -8,7 +8,6 @@
     position: relative;
     overflow-x: auto;
   }
-
   &__wrapper {
     position: absolute;
     overflow-y: hidden;
@@ -103,6 +102,8 @@
       text-transform: uppercase;
       color: $white;
       text-decoration: none;
+      cursor: pointer;
+
 
       &::after {
         content: '';

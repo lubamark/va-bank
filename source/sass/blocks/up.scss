@@ -9,6 +9,7 @@
   height: 42px;
   background-color: $red;
   border: none;
+  transition: all 0.3s ease;
 
   &::after {
     content: '';

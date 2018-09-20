@@ -55,7 +55,7 @@
       position: absolute;
       z-index: -1;
       top: -20px;
-      left: 34px;
+      right: -20px;
       width: 100%;
       height: 100%;
       background-color: $red;
@@ -68,8 +68,6 @@
 
     @media screen and (min-width: $tablet-width) {
       &::after {
-        top: -20px;
-        left: 48px;
         width: 93%;
         height: 95%;
       }
@@ -82,6 +80,8 @@
       margin-right: -20px;
       max-width: 500px;
       &::after {
+        right: -24px;
+        top: -24px;
         width: 96%;
       }
     }

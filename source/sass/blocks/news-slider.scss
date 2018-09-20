@@ -17,10 +17,26 @@
   }
 
   &__item {
+    position: relative;
     margin-left: 12px;
     transform: translateX(8px);
     width: 143px;
     overflow: hidden;
+
+    a {
+      position: relative;
+      &:hover::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba($red, 0.8) url("data:image/svg+xml,%3Csvg width='33' height='33' viewBox='0 0 33 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='14.1421' cy='14.4644' r='9' transform='rotate(-45 14.1421 14.4644)' stroke='white' stroke-width='2'/%3E%3Cpath d='M20.5059 20.8284L25.5059 25.8284' stroke='white' stroke-width='2'/%3E%3Cpath d='M14.1416 10.4644V18.4644' stroke='white' stroke-width='2'/%3E%3Cpath d='M18.1426 14.4646H10.1426' stroke='white' stroke-width='2'/%3E%3C/svg%3E") no-repeat center center;
+      }
+    }
+
+
 
     img {
       height: 97px;

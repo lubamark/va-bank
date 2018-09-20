@@ -157,6 +157,7 @@ h1 {
   text-transform: uppercase;
   background-color: $red;
   border: none;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: $red-hover;
@@ -178,13 +179,9 @@ h1 {
 
   &--wide {
     width: 100%;
-    max-width: 300px;
+    max-width: 334px;
     font-size: 20px;
     padding: 17px 7px 13px 7px;
-
-    @media screen and (min-width: $laptop-width) {
-      max-width: 330px;
-    }
   }
 }
 .link-red {
@@ -198,7 +195,7 @@ h1 {
   text-transform: uppercase;
   text-decoration: none;
   margin-bottom: 5px;
-
+  transition: all 0.3s ease;
   color: $red;
 
   &--arrow {

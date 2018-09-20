@@ -51,7 +51,7 @@
   display: inline-block;
   width: 100%;
   min-height: 100vh;
-  max-width: 610px;
+
   padding: 52px 20px 75px 20px;
 
   vertical-align: middle;
@@ -59,8 +59,7 @@
   text-align: left;
 
   &--narrow {
-    max-width: 454px !important;
-    padding: 59px;
+    padding-top: 59px;
   }
   &--teachers {
     padding-top: 18px;
@@ -123,8 +122,12 @@
   @media screen and (min-width: $tablet-width) {
     height: auto;
     min-height: 300px;
+    max-width: 610px;
     margin: 40px 0;
     padding: 40px 40px 60px;
+    &--narrow {
+      max-width: 454px !important;
+    }
     &--teachers {
       padding-top: 30px;
       padding-bottom: 30px;
