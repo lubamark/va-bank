@@ -92,6 +92,7 @@
     color: $black;
     border: 1px solid $gray-border;
     background-color: $white;
+    box-shadow: none;
 
     &:focus,
     &:hover {
@@ -122,7 +123,8 @@
     max-height: 174px;
 
     @media screen and (min-width: $tablet-width) {
-      height: 174px;
+      height: 188px;
+      max-height: 188px;
       max-width: 320px;
     }
   }

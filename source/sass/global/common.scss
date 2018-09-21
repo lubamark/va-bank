@@ -16,11 +16,11 @@ body {
   line-height: 23px;
   color: $black;
   background: url('../img/noisy-texture.png') repeat top left;
+  background-size: 200px ;
 
   &._menu {
     height: 100vh;
     min-height: 350px;
-    right: 17px;
     overflow: hidden;
     &::before {
       content: '';
@@ -145,11 +145,12 @@ h1 {
   position: relative;
 
   display: inline-block;
-  padding: 8px 55px 5px;
+  padding: 9px 55px 5px;
 
   text-align: center;
   font-family: $Oswald;
   font-size: 14px;
+  line-height: 22px;
   letter-spacing: 0.04em;
 
   color: $white;
@@ -166,7 +167,7 @@ h1 {
   &--arrow::before {
     content: '';
     position: absolute;
-    top: 14px;
+    top: 15px;
     right: 24px;
 
     width: 7px;
@@ -185,11 +186,12 @@ h1 {
   }
 }
 .link-red {
+  display: inline-block;
   position: relative;
 
   font-family: $Oswald;
   font-weight: 500;
-  line-height: normal;
+  line-height: 22px;
   font-size: 14px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -203,7 +205,7 @@ h1 {
     &::before {
       content: '';
       position: absolute;
-      top: 1px;
+      top: 5px;
       right: 2px;
 
       width: 7px;

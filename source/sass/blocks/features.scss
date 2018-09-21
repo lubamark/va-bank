@@ -73,13 +73,19 @@
       background-position: -4px center;
     }
 
+    &--school {
+      background-position-x:  3px;
+    }
+
     @media screen and (min-width: $tablet-width) {
+      width: calc((100% - 50px) / 3);
       padding: 59px  0 0 0;
       background-position: left 10px;
       margin-right: 25px;
     }
 
     @media screen and (min-width: $laptop-width) {
+      width: calc((100% - 12%) / 3);
       margin-right: 6%;
       padding: 0 0 0 53px;
       background-position: 0 0;
