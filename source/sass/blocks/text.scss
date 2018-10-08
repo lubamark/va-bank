@@ -23,8 +23,8 @@
   a {
     color: $red;
     text-decoration: underline;
-    &:hover,
-    &:focus {
+    &:not(.mobile):hover,
+    &:not(.mobile):focus {
       color: $red-hover;
     }
   }

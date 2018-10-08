@@ -93,8 +93,8 @@
       transform: rotate(-135deg);
     }
 
-    &:hover,
-    &:focus {
+    &:not(.mobile):hover,
+    &:not(.mobile):focus {
       &::before {
         border-color: $red
       }
@@ -107,8 +107,8 @@
 
     text-decoration: none;
     color: $black;
-    &:hover,
-    &:focus {
+    &:not(.mobile):hover,
+    &:not(.mobile):focus {
       color: $red;
     }
 

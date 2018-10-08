@@ -25,7 +25,7 @@
 
     a {
       position: relative;
-      &:hover::after {
+      &:not(.mobile):hover::after {
         content: '';
         position: absolute;
         top: 0;

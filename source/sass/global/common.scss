@@ -56,8 +56,8 @@ main {
   box-sizing: inherit;
 }
 
-*:focus,
-*:hover {
+*:not(.mobile):focus,
+*:not(.mobile):hover {
   outline: none;
 }
 
@@ -164,18 +164,23 @@ h1 {
     background-color: $red-hover;
   }
 
-  &--arrow::before {
-    content: '';
-    position: absolute;
-    top: 15px;
-    right: 24px;
+  &--arrow {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      right: 24px;
 
-    width: 7px;
-    height: 7px;
-    border-bottom: 2px solid $white;
-    border-right: 2px solid $white;
-    transform-origin: center;
-    transform: rotate(-45deg);
+      width: 7px;
+      height: 7px;
+      border-bottom: 2px solid $white;
+      border-right: 2px solid $white;
+      transform-origin: center;
+      transform: rotate(-45deg);
+    }
+    &._ios::before {
+      top: 17px;
+    }
   }
 
   &--wide {
@@ -207,7 +212,6 @@ h1 {
       position: absolute;
       top: 5px;
       right: 2px;
-
       width: 7px;
       height: 7px;
 
@@ -215,16 +219,19 @@ h1 {
       border-bottom: 2px solid $red;
       transform: rotate(-45deg);
     }
+    &._ios::before {
+      top: 7px;
+    }
 
-    &:hover,
-    &:focus {
+    &:not(.mobile):hover,
+    &:not(.mobile):focus {
       &::before {
         border-color: $red-hover;
       }
     }
   }
-  &:hover,
-  &:focus {
+  &:not(.mobile):hover,
+  &:not(.mobile):focus {
     color: $red-hover;
   }
 }

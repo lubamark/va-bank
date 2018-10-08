@@ -9,6 +9,7 @@
   height: 42px;
   background-color: $red;
   border: none;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.55);
   transition: all 0.3s ease;
 
   &::after {
@@ -22,6 +23,7 @@
     border-left: 2px solid $white;
     transform-origin: center;
     transform: rotate(45deg);
+
   }
 
   &:hover,

@@ -176,6 +176,10 @@
   }
   &__main {
     margin-bottom: 18px;
+    @media screen and (min-width: $tablet-width) {
+      margin-right: 18px;
+    }
+
     @media screen and(min-width: $laptop-width) {
       margin-bottom: 0;
     }
@@ -194,8 +198,8 @@
       .news__title {
         transition: all 0.3s ease;
       }
-      &:hover,
-      &:focus {
+      &:not(.mobile):hover,
+      &:not(.mobile):focus {
         .news__title {
           color: $red-hover;
         }
@@ -237,7 +241,6 @@
     @media screen and (min-width: $tablet-width) {
       &--main {
         width: 340px;
-        margin-right: 18px;
         .news__text {
           padding: 12px 22px 25px;
           height: 118px;
@@ -330,8 +333,8 @@
       }
     }
 
-    &:hover,
-    &:focus {
+    &:not(.mobile):hover,
+    &:not(.mobile):focus {
       .news__img {
         &::before,
         &::after {

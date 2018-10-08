@@ -137,7 +137,7 @@
       margin-right: 0;
     }
 
-    a:hover {
+    a:not(.mobile):hover {
       .partners__img {
         filter: none;
       }

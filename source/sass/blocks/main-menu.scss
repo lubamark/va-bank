@@ -48,8 +48,8 @@
         transition: width 0.3s ease;
       }
 
-      &:hover,
-      &:focus {
+      &:not(.mobile):hover,
+      &:not(.mobile):focus {
         &::after {
           width: calc(100% - 38px);
         }
@@ -59,8 +59,8 @@
     @media screen and (min-width: $desktop-width) {
       padding: 18px 25px 15px;
       font-size: 19px;
-      &:hover,
-      &:focus {
+      &:not(.mobile):hover,
+      &:not(.mobile):focus {
         &::after {
           width: calc(100% - 50px);
           margin: 0 25px;

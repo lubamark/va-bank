@@ -40,13 +40,14 @@
 
   &__point {
     display: flex;
+    flex-grow: 1;
     margin-bottom: 13px;
     max-width: 400px;
 
 
     &--social {
+      flex-grow: 0;
       margin-left: 80px;
-
       font-family: $Roboto;
       font-weight: 300;
       line-height: 17px;
@@ -57,6 +58,7 @@
 
       flex-basis: 50%;
       @media screen and (min-width: $tablet-width) {
+        margin-left: auto;
         padding-top: 14px;
         justify-content: flex-end;
         span {
@@ -73,6 +75,7 @@
   &__text {
     display: flex;
     flex-direction: column;
+
 
     @media screen and (min-width: $tablet-width) {
       align-self: flex-start;
@@ -101,8 +104,8 @@
     }
   }
 
-  a:hover,
-  a:focus {
+  a:not(.mobile):hover,
+  a:not(.mobile):focus {
     color: $red;
   }
 
@@ -121,8 +124,8 @@
         fill: $white;
       }
 
-      &:hover,
-      &:focus {
+      &:not(.mobile):hover,
+      &:not(.mobile):focus {
         svg {
           fill: $red;
         }
