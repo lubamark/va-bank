@@ -1,8 +1,9 @@
 var $links =  $('a');
-$links.addClass('mobile');
+$links.addClass('_mobile');
 
 if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
-  $links.addClass('mobile');
+  $links.addClass('_mobile');
 } else {
-  $links.removeClass('mobile');
+  $links.removeClass('_mobile');
 }
+git

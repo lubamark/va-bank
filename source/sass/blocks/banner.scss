@@ -16,7 +16,6 @@
   }
 
   @media screen and (min-width: 380px) {
-
     padding: 20px 25px 28px 25px;
   }
 
@@ -52,12 +51,16 @@
     color: $white;
   }
   &__team--right {
+    text-align: right;
     .banner__result {
       order: 0;
     }
     .banner__logo {
       order: 1;
     }
+  }
+  &__team--left {
+    text-align: left;
   }
   &__logo {
     display: flex;
@@ -157,7 +160,7 @@
   &__teams {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 
   &__result {
@@ -183,8 +186,9 @@
     text-transform: uppercase;
 
     @media screen and (min-width: $desktop-width) {
-    line-height: 27px;
+    line-height: 22px;
     font-size: 14px;
+    max-width: 150px;
   }
   }
   &__city {
