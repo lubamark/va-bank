@@ -194,6 +194,34 @@ Ellimination.prototype.init = function(){
     cmp.prev[0].disabled = true;
     cmp.next[0].disabled = false;
 
+    if(cmp.current < 2){
+        cmp.prev[0].disabled = true;
+    }
+    else{
+        cmp.prev[0].disabled = false;
+    }
+    if(cmp.current > (cmp.step.length - (parseInt($(window).width(),0)<1440?2:3))){
+        cmp.next[0].disabled = true;
+    }
+    else{
+        cmp.next[0].disabled = false;
+    }
+
+    $(window).on('resize', function(){
+        if(cmp.current < 2){
+            cmp.prev[0].disabled = true;
+        }
+        else{
+            cmp.prev[0].disabled = false;
+        }
+        if(cmp.current > (cmp.step.length - (parseInt($(window).width(),0)<1440?2:3))){
+            cmp.next[0].disabled = true;
+        }
+        else{
+            cmp.next[0].disabled = false;
+        }
+    });
+
     cmp.prev.on('click', function(e){
         e.preventDefault();
         cmp.current--;

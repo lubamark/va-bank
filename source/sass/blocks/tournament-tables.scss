@@ -1425,6 +1425,14 @@
             }
         }
     }
+    .ellimination-column:first-child &{
+        &:before{
+            content: none;
+        }
+        &:after{
+            content: none;
+        }
+    }
 
     &--third{
         display: block;
